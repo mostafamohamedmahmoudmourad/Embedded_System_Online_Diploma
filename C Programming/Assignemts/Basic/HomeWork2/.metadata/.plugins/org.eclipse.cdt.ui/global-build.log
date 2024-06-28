@@ -1,0 +1,615 @@
+02:10:50 **** Rebuild of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:14:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'printf'
+  printf("Enter an integer you want to check:");
+  ^
+..\main.c:16:14: error: 'num' undeclared (first use in this function)
+  scanf("%d",&num);
+              ^
+..\main.c:16:14: note: each undeclared identifier is reported only once for each function it appears in
+02:10:59 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise1.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+02:12:49 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:16:8: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'float *' [-Wformat=]
+  scanf("%d",&num);
+        ^
+..\main.c:17:9: error: invalid operands to binary % (have 'float' and 'int')
+  if((num%2)==0)
+         ^
+..\main.c:19:10: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+   printf("%d is even\n",num);
+          ^
+..\main.c:23:10: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+   printf("%d is odd\n",num);
+          ^
+02:13:21 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise1.exe main.o 
+02:13:54 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:23:10: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+   printf("%f is odd\n",num);
+          ^
+gcc -o Exercise1.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+02:16:01 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise1.exe main.o 
+Info: Nothing to build for Exercise1
+02:19:33 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:21:3: error: continue statement not within a loop
+   continue;
+   ^
+02:20:12 **** Incremental Build of configuration Debug for project Exercise1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise1.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise1
+02:42:29 **** Rebuild of configuration Debug for project Exercise2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise2.exe main.o 
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+02:58:33 **** Rebuild of configuration Debug for project Exercise3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:37:2: error: expected declaration or statement at end of input
+  }
+  ^
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+02:58:53 **** Incremental Build of configuration Debug for project Exercise3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise3.exe main.o 
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+03:00:33 **** Incremental Build of configuration Debug for project Exercise3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise3.exe main.o 
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+03:06:26 **** Rebuild of configuration Debug for project Exercise4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise4.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../libmingw32.a(main.o):main.c:(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+03:12:36 **** Incremental Build of configuration Debug for project Exercise4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise4.exe main.o 
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+03:15:19 **** Incremental Build of configuration Debug for project Exercise4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise4.exe main.o 
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+03:18:52 **** Incremental Build of configuration Debug for project Exercise4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise4.exe main.o 
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+18:34:15 **** Rebuild of configuration Debug for project Exercise5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise5.exe main.o 
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+18:48:36 **** Rebuild of configuration Debug for project Exercise6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise6.exe main.o 
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+18:49:29 **** Incremental Build of configuration Debug for project Exercise6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise6.exe main.o 
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+18:49:59 **** Incremental Build of configuration Debug for project Exercise6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise6.exe main.o 
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+18:50:27 **** Incremental Build of configuration Debug for project Exercise6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise6.exe main.o 
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+18:50:50 **** Incremental Build of configuration Debug for project Exercise6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise6.exe main.o 
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+18:51:07 **** Incremental Build of configuration Debug for project Exercise6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise6.exe main.o 
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:18:19 **** Rebuild of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:10: warning: conversion lacks type at end of format [-Wformat=]
+   printf("Factorial = %l",mult);
+          ^
+..\main.c:29:10: warning: too many arguments for format [-Wformat-extra-args]
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:18:43 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:10: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'long long int' [-Wformat=]
+   printf("Factorial = %lu",mult);
+          ^
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:20:51 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:10: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'long long int' [-Wformat=]
+   printf("Factorial = %lu",mult);
+          ^
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:21:50 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:10: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+   printf("Factorial = %lu",mult);
+          ^
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:22:50 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:10: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'long long int' [-Wformat=]
+   printf("Factorial = %lu",mult);
+          ^
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:23:46 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:10: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'long long int' [-Wformat=]
+   printf("Factorial = %lu",mult);
+          ^
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:25:15 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:28:10: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'int' [-Wformat=]
+   printf("Factorial = %lu",mult);
+          ^
+gcc -o Exercise7.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Exercise7.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:27:14 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+19:28:08 **** Incremental Build of configuration Debug for project Exercise7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:28:10: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'long long int' [-Wformat=]
+   printf("Factorial = %lu",mult);
+          ^
+gcc -o Exercise7.exe main.o 
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+19:48:11 **** Rebuild of configuration Debug for project Exercise8 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:36:2: error: expected declaration or statement at end of input
+  }
+  ^
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+19:48:33 **** Incremental Build of configuration Debug for project Exercise8 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Exercise8.exe main.o 
+Info: Nothing to build for Exercise8
+20:04:20 **** Rebuild of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+20:05:04 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+20:49:29 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+20:50:19 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:19:6: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(c>b>a)
+      ^
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+20:50:46 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:19:6: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(c>b>a)
+      ^
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+20:52:01 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:19:6: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  if(c>b>a)
+      ^
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+21:05:28 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:29: error: expected ')' before ';' token
+  printf("%.2f ",((9/5)*a+32);
+                             ^
+..\main.c:26:1: error: expected ';' before '}' token
+ }
+ ^
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+21:05:31 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:29: error: expected ')' before ';' token
+  printf("%.2f ",((9/5)*a+32);
+                             ^
+..\main.c:26:1: error: expected ';' before '}' token
+ }
+ ^
+21:05:57 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+21:07:36 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+21:08:24 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+21:10:46 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+      printf("%d",1<<2+3<<4);
+                   ^
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX
+21:41:14 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:23: error: lvalue required as increment operand
+      printf("%d",(++a)++);
+                       ^
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+21:41:17 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:23: error: lvalue required as increment operand
+      printf("%d",(++a)++);
+                       ^
+21:41:54 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:24: error: lvalue required as increment operand
+      printf("%d",((++a)++));
+                        ^
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+21:41:59 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:24: error: lvalue required as increment operand
+      printf("%d",((++a)++));
+                        ^
+22:11:09 **** Incremental Build of configuration Debug for project EX ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o EX.exe main.o 
+Info: Nothing to build for Exercise1
+Info: Nothing to build for Exercise2
+Info: Nothing to build for Exercise3
+Info: Nothing to build for Exercise4
+Info: Nothing to build for Exercise5
+Info: Nothing to build for Exercise6
+Info: Nothing to build for Exercise7
+Info: Nothing to build for Exercise8
+Info: Nothing to build for EX

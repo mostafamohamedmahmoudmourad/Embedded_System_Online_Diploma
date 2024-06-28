@@ -1,0 +1,28 @@
+/*
+ * main.c
+ *
+ *  Created on: 27 Jun 2024
+ *      Author: HP
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+	//float a = 5.0;
+
+	    printf("%d",1<<2+3<<4);
+
+	    return 0;
+//	if(c>b>a)
+//	{
+//		printf("t");
+//	}else
+//	{
+//		printf("f");
+//	}
+}

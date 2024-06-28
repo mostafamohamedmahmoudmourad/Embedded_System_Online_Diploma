@@ -1,0 +1,28 @@
+/*
+ * main.c
+ *
+ *  Created on: 27 Jun 2024
+ *      Author: HP
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+	int a = 5;
+
+	    printf("%d",((++a)++));
+
+	    return 0;
+//	if(c>b>a)
+//	{
+//		printf("t");
+//	}else
+//	{
+//		printf("f");
+//	}
+}
