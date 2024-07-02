@@ -1,0 +1,753 @@
+02:12:54 **** Rebuild of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:26:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&a[x][y]);
+          ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:55:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+02:14:00 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:26:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:55:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:16:18 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:26:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:55:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:17:24 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:26:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:55:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:20:21 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:26:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:55:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:20:52 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -o Example1.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:21:15 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:27:10 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:26:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:55:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:28:58 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:26:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:55:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+02:39:24 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:27:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:39:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:56:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:39:52 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:40:43 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:27:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f", &a[x][y]);
+          ^
+..\main.c:39:10: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int *' [-Wformat=]
+    scanf("%f",&b[x][y]);
+          ^
+..\main.c:56:11: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+    printf("%.1f\t",c[x][y]);
+           ^
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:42:07 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:25:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+    printf("Enter a%d%d ",x+1,y+1);
+           ^
+..\main.c:25:11: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
+..\main.c:27:18: error: array subscript is not an integer
+    scanf("%f", &a[x][y]);
+                  ^
+..\main.c:37:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+    printf("Enter b%d%d ",x+1,y+1);
+           ^
+..\main.c:37:11: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
+..\main.c:39:17: error: array subscript is not an integer
+    scanf("%f",&b[x][y]);
+                 ^
+..\main.c:47:5: error: array subscript is not an integer
+    c[x][y]=a[x][y]+b[x][y];
+     ^
+..\main.c:47:13: error: array subscript is not an integer
+    c[x][y]=a[x][y]+b[x][y];
+             ^
+..\main.c:47:21: error: array subscript is not an integer
+    c[x][y]=a[x][y]+b[x][y];
+                     ^
+..\main.c:56:21: error: array subscript is not an integer
+    printf("%.1f\t",c[x][y]);
+                     ^
+..\main.c:16:24: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  float a[2][2],b[2][2],c[2][2];
+                        ^
+..\main.c:16:16: warning: variable 'b' set but not used [-Wunused-but-set-variable]
+  float a[2][2],b[2][2],c[2][2];
+                ^
+..\main.c:16:8: warning: variable 'a' set but not used [-Wunused-but-set-variable]
+  float a[2][2],b[2][2],c[2][2];
+        ^
+02:42:09 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:25:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+    printf("Enter a%d%d ",x+1,y+1);
+           ^
+..\main.c:25:11: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
+..\main.c:27:18: error: array subscript is not an integer
+    scanf("%f", &a[x][y]);
+                  ^
+..\main.c:37:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+    printf("Enter b%d%d ",x+1,y+1);
+           ^
+..\main.c:37:11: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
+..\main.c:39:17: error: array subscript is not an integer
+    scanf("%f",&b[x][y]);
+                 ^
+..\main.c:47:5: error: array subscript is not an integer
+    c[x][y]=a[x][y]+b[x][y];
+     ^
+..\main.c:47:13: error: array subscript is not an integer
+    c[x][y]=a[x][y]+b[x][y];
+             ^
+..\main.c:47:21: error: array subscript is not an integer
+    c[x][y]=a[x][y]+b[x][y];
+                     ^
+..\main.c:56:21: error: array subscript is not an integer
+    printf("%.1f\t",c[x][y]);
+                     ^
+..\main.c:16:24: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  float a[2][2],b[2][2],c[2][2];
+                        ^
+..\main.c:16:16: warning: variable 'b' set but not used [-Wunused-but-set-variable]
+  float a[2][2],b[2][2],c[2][2];
+                ^
+..\main.c:16:8: warning: variable 'a' set but not used [-Wunused-but-set-variable]
+  float a[2][2],b[2][2],c[2][2];
+        ^
+02:42:39 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:44:59 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+02:48:04 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example1.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:49:22 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+18:06:41 **** Rebuild of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:21:30: warning: comparison between pointer and integer
+  if(int_number>50||int_number<NULL) //check number
+                              ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+   printf("Average of Element is %f",average);
+          ^
+gcc -o Example2.exe main.o 
+Info: Nothing to build for Example2
+Info: Nothing to build for Example1
+18:07:36 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:21:30: warning: comparison between pointer and integer
+  if(int_number>50||int_number<NULL) //check number
+                              ^
+..\main.c:38:10: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+   printf("Average of Element is %f",average);
+          ^
+gcc -o Example2.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+18:08:21 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -o Example2.exe main.o 
+Info: Nothing to build for Example2
+Info: Nothing to build for Example2
+Info: Nothing to build for Example1
+18:09:51 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:21:30: warning: comparison between pointer and integer
+  if(int_number>50||int_number<NULL) //check number
+                              ^
+gcc -o Example2.exe main.o 
+Info: Nothing to build for Example1
+18:10:13 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:21:30: warning: comparison between pointer and integer
+  if(int_number>50||int_number<NULL) //check number
+                              ^
+gcc -o Example2.exe main.o 
+Info: Nothing to build for Example2
+Info: Nothing to build for Example1
+18:21:14 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:21:30: error: lvalue required as left operand of assignment
+  if(int_number>50||int_number=NULL) //check number
+                              ^
+Info: Nothing to build for Example1
+18:21:56 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example2.exe main.o 
+Info: Nothing to build for Example2
+Info: Nothing to build for Example2
+Info: Nothing to build for Example2
+Info: Nothing to build for Example1
+18:50:05 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example2.exe main.o 
+18:50:07 **** Rebuild of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../libmingw32.a(main.o):main.c:(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+18:52:45 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:16:30: error: expected ',' or ';' before 'IntRcounter'
+  int  IntRows=0,IntColumn=0  IntRcounter=0,IntCcounter=0;
+                              ^
+..\main.c:23:6: error: 'IntRcounter' undeclared (first use in this function)
+  for(IntRcounter=0;IntRcounter<IntRows;IntRcounter++)
+      ^
+..\main.c:23:6: note: each undeclared identifier is reported only once for each function it appears in
+..\main.c:25:7: error: 'IntCcounter' undeclared (first use in this function)
+   for(IntCcounter=0;IntCcounter<IntColumn;IntCcounter++)
+       ^
+..\main.c:36:3: error: expected ';' before '}' token
+   }
+   ^
+..\main.c:17:8: warning: variable 'arr' set but not used [-Wunused-but-set-variable]
+  float arr[10][10];
+        ^
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+18:53:22 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:36:3: error: expected ';' before '}' token
+   }
+   ^
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+18:53:32 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+18:56:00 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:02:43 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+19:02:50 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:08:41 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:09:17 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:10:42 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:10:52 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:11:37 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:15:57 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:16:57 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:18:29 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:23:28 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:28:44 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:29:39 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+19:40:40 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+20:17:22 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+20:17:23 **** Rebuild of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:40:16: error: 'Local_IntArr' undeclared (first use in this function)
+   printf("%d ",Local_IntArr[counter]);
+                ^
+..\main.c:40:16: note: each undeclared identifier is reported only once for each function it appears in
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+20:17:41 **** Incremental Build of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example4.exe main.o 
+Info: Nothing to build for Example4
+Info: Nothing to build for Example4
+20:19:40 **** Incremental Build of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example4.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example4.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+20:20:26 **** Incremental Build of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -o Example4.exe main.o 
+Info: Nothing to build for Example4
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+20:21:04 **** Incremental Build of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example4.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example4.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+20:22:05 **** Incremental Build of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -o Example4.exe main.o 
+Info: Nothing to build for Example4
+Info: Nothing to build for Example4
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+20:35:23 **** Incremental Build of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example4.exe main.o 
+Info: Nothing to build for Example4
+Info: Nothing to build for Example4
+Info: Nothing to build for Example4
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example4
+Info: Nothing to build for Example1
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+21:35:44 **** Rebuild of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+21:37:00 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example5.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+21:37:32 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+21:59:29 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:02:23 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:03:08 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:03:58 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:04:44 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:05:44 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:06:37 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:07:45 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:08:19 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+22:09:24 **** Incremental Build of configuration Debug for project Example5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example5.exe main.o 
+Info: Nothing to build for Example5
+Info: Nothing to build for Example5
+Info: Nothing to build for Example5
+Info: Nothing to build for Example5
+Info: Nothing to build for Example5
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example5
+23:05:18 **** Rebuild of configuration Debug for project Example6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example6.exe main.o 
+Info: Nothing to build for Example6
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example5
+23:06:07 **** Incremental Build of configuration Debug for project Example6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example6.exe main.o 
+Info: Nothing to build for Example6
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example5
+23:08:01 **** Incremental Build of configuration Debug for project Example6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example6.exe main.o 
+Info: Nothing to build for Example6
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example5
+23:08:49 **** Incremental Build of configuration Debug for project Example6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example6.exe main.o 
+Info: Nothing to build for Example6
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example5
+Info: Nothing to build for Example6
+23:19:57 **** Rebuild of configuration Debug for project Example7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:16:18: warning: unused variable 'IntCounter' [-Wunused-variable]
+  int IntNumber=0,IntCounter=0;
+                  ^
+..\main.c:16:6: warning: unused variable 'IntNumber' [-Wunused-variable]
+  int IntNumber=0,IntCounter=0;
+      ^
+gcc -o Example7.exe main.o 
+23:20:04 **** Incremental Build of configuration Debug for project Example7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example7.exe main.o 
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example4
+Info: Nothing to build for Example5
+Info: Nothing to build for Example6
+Info: Nothing to build for Example7
+23:35:58 **** Rebuild of configuration Debug for project Example8 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example8.exe main.o 
+Info: Nothing to build for Example8
+Info: Nothing to build for Example8
+Info: Nothing to build for Example8
