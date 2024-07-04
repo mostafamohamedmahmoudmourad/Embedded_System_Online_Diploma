@@ -1,0 +1,34 @@
+/*
+ * main.c
+ *
+ *  Created on: 4 Jul 2024
+ *  Author: Mostafa Mourad
+ *
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int CheckPrimeNumber(int IntCheckNumber);   // function declaration
+
+int main()
+{
+
+	int number1,number2,counter;
+	setbuf(stdout,NULL);
+	printf("Enter Two Number: ");
+
+
+
+
+	return 0;
+}
+
+int CheckPrimeNumber(int IntCheckNumber)
+{
+
+
+
+	return 0;
+}

@@ -1,0 +1,38 @@
+/*
+ * main.c
+ *
+ *  Created on: 5 Jul 2024
+ *      Author: Mostafa Mourad
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Reverse();
+
+int main()
+{
+	setbuf(stdout,NULL);
+	printf("Enter a Sentence: ");
+	Reverse();
+	return 0;
+}
+
+
+int Reverse()
+{
+	char arr[50];
+	int number, strlen;
+	gets(arr);
+	while(arr[number]!='\0')
+	{
+		number++;
+	}
+	strlen==number;
+	for(number=strlen-1;number>=0;number)
+	{
+		printf("%c",arr[number]);
+	}
+
+}

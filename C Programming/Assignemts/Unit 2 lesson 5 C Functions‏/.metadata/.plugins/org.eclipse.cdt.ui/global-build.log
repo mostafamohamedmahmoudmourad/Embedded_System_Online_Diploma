@@ -1,0 +1,268 @@
+23:11:29 **** Rebuild of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:18:22: warning: unused variable 'counter' [-Wunused-variable]
+  int number1,number2,counter;
+                      ^
+..\main.c:18:14: warning: unused variable 'number2' [-Wunused-variable]
+  int number1,number2,counter;
+              ^
+..\main.c:18:6: warning: unused variable 'number1' [-Wunused-variable]
+  int number1,number2,counter;
+      ^
+gcc -o Example1.exe main.o 
+23:29:30 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+23:30:28 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example1.exe main.o 
+Info: Nothing to build for Example1
+00:02:19 **** Incremental Build of configuration Debug for project Example1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example1.exe main.o 
+00:02:20 **** Rebuild of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example2.exe main.o 
+Info: Nothing to build for Example2
+Info: Nothing to build for Example1
+00:16:23 **** Incremental Build of configuration Debug for project Example2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example2.exe main.o 
+00:16:24 **** Rebuild of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../libmingw32.a(main.o):main.c:(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:23:07 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:27:9: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  printf("%s",c);
+         ^
+..\main.c:25:6: warning: unused variable 'n' [-Wunused-variable]
+  int n;
+      ^
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:31:10 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:24:7: error: array size missing in 'arr'
+  char arr[];
+       ^
+..\main.c:31:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+00:31:14 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:24:7: error: array size missing in 'arr'
+  char arr[];
+       ^
+..\main.c:31:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:31:45 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:31:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+..\main.c:32:12: warning: 'strlen' is used uninitialized in this function [-Wuninitialized]
+  for(number=strlen-1;number>=0;number)
+            ^
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:33:03 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:33:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+..\main.c:33:12: warning: 'strlen' is used uninitialized in this function [-Wuninitialized]
+  for(number=strlen-1;number>=0;number)
+            ^
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:33:40 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:23:5: error: conflicting types for 'Reverse'
+ int Reverse()
+     ^
+..\main.c:12:6: note: previous declaration of 'Reverse' was here
+ void Reverse();
+      ^
+..\main.c: In function 'Reverse':
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:33:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+..\main.c:37:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:33:58 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:33:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+..\main.c:37:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^
+..\main.c:33:12: warning: 'strlen' is used uninitialized in this function [-Wuninitialized]
+  for(number=strlen-1;number>=0;number)
+            ^
+gcc -o Example3.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:34:14 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:33:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+..\main.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+..\main.c:33:12: warning: 'strlen' is used uninitialized in this function [-Wuninitialized]
+  for(number=strlen-1;number>=0;number)
+            ^
+gcc -o Example3.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:34:17 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -o Example3.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:34:35 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -o Example3.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:35:15 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:32:2: warning: statement with no effect [-Wunused-value]
+  strlen==number;
+  ^
+..\main.c:33:2: warning: statement with no effect [-Wunused-value]
+  for(number=strlen-1;number>=0;number)
+  ^
+..\main.c:33:12: warning: 'strlen' is used uninitialized in this function [-Wuninitialized]
+  for(number=strlen-1;number>=0;number)
+            ^
+gcc -o Example3.exe main.o 
+C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: cannot open output file Example3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:37:03 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:46:37 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'Reverse':
+..\main.c:35:3: warning: statement with no effect [-Wunused-value]
+   strlen==number;
+   ^
+..\main.c:36:3: warning: statement with no effect [-Wunused-value]
+   for(number=strlen-1;number>=0;number)
+   ^
+..\main.c:36:13: warning: 'strlen' is used uninitialized in this function [-Wuninitialized]
+   for(number=strlen-1;number>=0;number)
+             ^
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+00:48:18 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+Info: Nothing to build for Example3
+Info: Nothing to build for Example3
+Info: Nothing to build for Example1
+Info: Nothing to build for Example2
+01:11:40 **** Incremental Build of configuration Debug for project Example3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example3.exe main.o 
+01:11:43 **** Rebuild of configuration Debug for project Example4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o Example4.exe main.o 
+Info: Nothing to build for Example4
+Info: Nothing to build for Example4
