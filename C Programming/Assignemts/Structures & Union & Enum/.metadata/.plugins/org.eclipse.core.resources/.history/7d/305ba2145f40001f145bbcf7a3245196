@@ -1,0 +1,26 @@
+/*
+ * main.c
+ *
+ *  Created on: 12 Jul 2024
+ *  Author: Mostafa Mourad
+ *
+ *  Ex5: C Program to Find Area of a Circle,Passing Arguments to Macros.
+ */
+
+
+#include <stdio.h>
+
+/*-----------------------MACRO Declarations--------------------*/
+#define PI 3.14
+/*--------------------------Function declarations------------------------*/
+//Function to Calculates The Circle of Area.
+double AreaOfCircle(float radius);
+
+int main()
+{
+	setbuf(stdout,NULL);
+	float radius;									// Declare The Variable For The Radius.
+
+
+	return 0;
+}

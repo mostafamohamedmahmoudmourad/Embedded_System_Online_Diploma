@@ -1,0 +1,19 @@
+/*
+ * main.c
+ *
+ *  Created on: 12 Jul 2024
+ *  Author: Mostafa Mourad
+ *
+ *	Ex4:C Program to Store Information of Student Using Structure.
+ */
+
+
+#include<stdio.h>
+
+int main()
+{
+
+
+	return 0;
+}
+

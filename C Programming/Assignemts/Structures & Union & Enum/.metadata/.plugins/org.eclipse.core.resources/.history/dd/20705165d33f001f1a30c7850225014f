@@ -1,0 +1,42 @@
+/*
+ * main.c
+ *
+ *  Created on: 12 Jul 2024
+ *  Author: Mostafa Mourad
+ *
+ *  Ex2
+ */
+
+#include <stdio.h>
+
+struct Distance {
+	int feet;
+	float inch;
+
+}Distance_t;
+
+int main()
+{
+	Distance_t Distance_t[2];
+	int IntFeet =0;
+	float FloatInch =0;
+	setbuf(stdout,NULL);
+	printf("Enter Information for 1st Distance: \n");
+	printf("Enter feet:");
+	scanf("%d",Distance_t[0].feet);
+	printf("Enter inch: ");
+	scanf("%f",Distance_t[0].inch);
+	printf("\nEnter Information for 2st Distance: \n");
+	printf("Enter feet:");
+	scanf("%d",Distance_t[1].feet);
+	printf("Enter inch: ");
+	scanf("%f",Distance_t[1].inch);
+	IntFeet=Distance_t[0].feet+Distance_t[1].feet;
+	FloatInch=Distance_t[0].inch+Distance_t[1].inch;
+	if(FloatInch>12){
+		FloatInch-=12;
+		++IntFeet;
+	}
+	printf("Sum of Distance %d %.2f",IntFeet,FloatInch);
+	return 0;
+}

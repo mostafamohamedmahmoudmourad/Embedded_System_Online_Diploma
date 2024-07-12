@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: 12 Jul 2024
+ *  Author: Mostafa Mourad
+ *
+ *  Ex2
+ */
+
+#include <stdio.h>
+
+struct Distance {
+	int feet;
+	float inch;
+
+}Distance_t;
+
+int main()
+{
+	Distance_t Distance[2];
+	int IntFeet =0;
+	float FloatInch =0;
+	printf("Enter Information for 1st Distance: \n");
+	printf("Enter feet:");
+	scanf("%d",Distance[0].feet);
+
+
+	return 0;
+}

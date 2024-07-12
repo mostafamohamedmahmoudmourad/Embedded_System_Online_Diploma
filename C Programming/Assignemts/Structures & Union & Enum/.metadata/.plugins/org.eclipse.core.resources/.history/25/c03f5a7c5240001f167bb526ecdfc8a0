@@ -1,0 +1,36 @@
+/*
+ * main.c
+ *
+ *  Created on: 12 Jul 2024
+ *  Author: Mostafa Mourad
+ *
+ *	Ex4:C Program to Store Information of Student Using Structure.
+ */
+
+
+#include <stdio.h>
+
+/*--------------------------Data Type Declarations------------------------*/
+// Structure Data Type to store the student Information
+struct SstudentInformation
+{
+	char name[40];					// Declaring Array to Store Students Name
+	int roll;						// Declaring Variable to Store the Roll Number
+	float marks;					// Declaring Variable to Store the Students Marks
+}StudInfo[10];
+
+
+int main()
+{
+	int i;
+	printf("Enter Information of Students: \n");			//ask user to Enter the Information of Students.
+
+	for (i=0;i<10;++i)
+	{
+
+
+	}
+
+	return 0;
+}
+
