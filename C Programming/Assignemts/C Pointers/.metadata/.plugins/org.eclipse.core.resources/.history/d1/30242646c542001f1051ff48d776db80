@@ -1,0 +1,16 @@
+/*
+ * main.c
+ *
+ *  Created on: 15 Jul 2024
+ *      Author: Mostafa Mourad
+ *
+ *  Ex4:Write a program in C to print the elements of an array in reverse order.
+ */
+
+#include <stdio.h>
+
+int main()
+{
+
+	return 0;
+}

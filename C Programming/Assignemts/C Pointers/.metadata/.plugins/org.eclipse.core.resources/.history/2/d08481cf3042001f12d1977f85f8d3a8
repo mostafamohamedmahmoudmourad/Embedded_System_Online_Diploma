@@ -1,0 +1,25 @@
+/*
+ * main.c
+ *
+ *  Created on: 15 Jul 2024
+ *      Author: Mostafa Mourad
+ *
+ *  Ex1: Write a program in C to demonstrate how to handle the pointers
+		 in the program.
+ */
+
+#include <stdio.h>
+
+int main()
+{
+	int m;							//Declare The Variable For
+	int* ab;
+	m=29;
+	printf("Address of m : %p\n",&m);
+	printf("Value of m : %d\n",m);
+	ab=&m;
+	printf("Now ab is assigned with the address of m.\n");
+	printf("Address of pointer ab : %p\n",ab);
+	printf("Content of pointer ab : %d\n",*ab);
+	return 0;
+}

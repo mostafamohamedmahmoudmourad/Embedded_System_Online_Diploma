@@ -1,0 +1,33 @@
+/*
+ * main.c
+ *
+ *  Created on: 15 Jul 2024
+ *      Author: Mostafa Mourad
+ *
+ *  Ex1: Write a program in C to demonstrate how to handle the pointers
+		 in the program.
+ */
+
+#include <stdio.h>
+
+int main()
+{
+	int m;										//declaration The Variable M.
+	int* ab;									//declaration The Pointer & AB is a Pointer of Integer.
+	m=29;										//First Storing m=29
+	printf("Address of m : %p\n",&m);			//Print The Address of m.
+	printf("Value of m : %d\n",m);				//Print The Value of m.
+	ab=&m;										//Storing The The Address of m in The Pointer.
+	printf("\nNow ab is assigned with the address of m.\n");
+	printf("Address of pointer ab : %p\n",ab);			//Print The Address of ab.
+	printf("Content of pointer ab : %d\n",*ab);			//Print The Value of ab.
+	m=34;												//Storing m= 34.
+	printf("\nThe value of m assigned to 34 now.\n");
+	printf("Address of pointer ab : %p\n",ab);			//Print The Address of ab After Change m Value.
+	printf("Content of pointer ab : %d\n",*ab);			//Print The Value of ab After Change m Value.
+	*ab=7;												//Storing *ab=7.
+	printf("\nThe pointer variable ab is assigned with the value 7 now.\n");
+	printf("Address of m : %p\n",&m);					//Print The Address of m.
+	printf("Value of m : %d\n",m);						//Print The Value of m.
+	return 0;
+}

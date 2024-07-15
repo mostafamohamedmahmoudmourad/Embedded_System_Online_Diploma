@@ -1,0 +1,36 @@
+/*
+ * main.c
+ *
+ *  Created on: 15 Jul 2024
+ *      Author: Mostafa Mourad
+ *
+ *  Ex4:Write a program in C to print the elements of an array in reverse order.
+ */
+
+#include <stdio.h>
+
+int main()
+{
+	int n,i,arr[20];
+	int *ptr;
+	setbuf(stdout,NULL);
+	printf("Input the number of elements to store in the array (max 15) : ");
+	scanf("%d",&n);
+	ptr=arr[0];
+	for(i=0;i<n;i++)
+	{
+		printf("Element --> %d : ",i+1);
+		scanf("%d",ptr);
+		ptr++;
+	}
+	ptr = &arr[n-1];
+	printf("The elements of array in reverse order are :\n");
+	for (i=n;i>0;i--)
+	{
+		printf("\nElement --> %d : %d \n",i,*ptr);
+		ptr--;
+
+	}
+
+	return 0;
+}
