@@ -1,0 +1,30 @@
+23:24:04 **** Build of configuration Debug for project Togling_Led ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Togling_Led.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded System\Basic\Embedded_System_Online_Diploma\Embedded_C\Assignment1\Togling_Led\Togling_Led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Togling_Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Togling_Led.elf
+ 
+arm-none-eabi-size   Togling_Led.elf 
+arm-none-eabi-objdump -h -S  Togling_Led.elf  > "Togling_Led.list"
+   text	   data	    bss	    dec	    hex	filename
+    672	     12	   1564	   2248	    8c8	Togling_Led.elf
+arm-none-eabi-objcopy  -O binary  Togling_Led.elf  "Togling_Led.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Togling_Led.list
+Finished building: Togling_Led.bin
+ 
+ 
+23:24:44 **** Incremental Build of configuration Debug for project Togling_Led ****
+make -j8 all 
+arm-none-eabi-size   Togling_Led.elf 
+arm-none-eabi-objcopy  -O ihex  Togling_Led.elf  "Togling_Led.hex"
+   text	   data	    bss	    dec	    hex	filename
+    672	     12	   1564	   2248	    8c8	Togling_Led.elf
+Finished building: default.size.stdout
+ 
+Finished building: Togling_Led.hex
+ 
