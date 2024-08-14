@@ -1,0 +1,617 @@
+18:21:42 **** Rebuild of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'setup':
+..\main.c:12:2: error: 'CA_state' undeclared (first use in this function)
+  CA_state = STATE(CA_waiting);
+  ^~~~~~~~
+..\main.c:12:2: note: each undeclared identifier is reported only once for each function it appears in
+..\main.c:12:13: warning: implicit declaration of function 'STATE' [-Wimplicit-function-declaration]
+  CA_state = STATE(CA_waiting);
+             ^~~~~
+..\main.c:12:19: error: 'CA_waiting' undeclared (first use in this function)
+  CA_state = STATE(CA_waiting);
+                   ^~~~~~~~~~
+..\main.c: At top level:
+..\main.c:16:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:24:3: warning: implicit declaration of function 'CA_state' [-Wimplicit-function-declaration]
+   CA_state();
+   ^~~~~~~~
+..\main.c:18:15: warning: unused variable 'i' [-Wunused-variable]
+  volatile int i;
+               ^
+18:22:12 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:17:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:19:15: warning: unused variable 'i' [-Wunused-variable]
+  volatile int i;
+               ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:25:2: error: 'CA_state_id' undeclared (first use in this function)
+  CA_state_id = CA_waiting;
+  ^~~~~~~~~~~
+..\CA.c:25:2: note: each undeclared identifier is reported only once for each function it appears in
+..\CA.c:25:16: error: 'CA_waiting' undeclared (first use in this function)
+  CA_state_id = CA_waiting;
+                ^~~~~~~~~~
+In file included from ..\CA.c:9:0:
+..\state.h:12:29: error: 'ST_CA_driving' undeclared (first use in this function)
+ #define STATE(_statFUN_)    ST_##_statFUN_
+                             ^
+..\CA.c:30:78: note: in expansion of macro 'STATE'
+  (CA_distance <= CA_threshold)? (CA_state = STATE(CA_waiting)) : (CA_state = STATE(CA_driving));
+                                                                              ^~~~~
+..\CA.c:31:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:31:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:31:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:37:3: error: 'CA_state_id' undeclared (first use in this function)
+   CA_state_id = CA_driving;
+   ^~~~~~~~~~~
+..\CA.c:37:17: error: 'CA_driving' undeclared (first use in this function)
+   CA_state_id = CA_driving;
+                 ^~~~~~~~~~
+..\CA.c:43:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:43:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:52:15: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+   rand_num = (rand() % (r - l + 1))+l;
+               ^~~~
+..\CA.c:53:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:47:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+18:23:09 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:31:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:31:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:31:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:43:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:43:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:52:15: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+   rand_num = (rand() % (r - l + 1))+l;
+               ^~~~
+..\CA.c:53:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:47:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+gcc -o CA_v1.exe CA.o main.o 
+18:23:20 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:51:15: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+   rand_num = (rand() % (r - l + 1))+l;
+               ^~~~
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+gcc -o CA_v1.exe CA.o main.o 
+18:23:59 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:51:16: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+   rand_num = ( rand() % (r - l + 1))+l;
+                ^~~~
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+gcc -o CA_v1.exe CA.o main.o 
+Info: Nothing to build for CA_v1
+Info: Nothing to build for CA_v1
+18:25:20 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:51:16: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+   rand_num = ( rand() % (r - l + 1))+l;
+                ^~~~
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+gcc -o CA_v1.exe CA.o main.o 
+Info: Nothing to build for CA_v1
+Info: Nothing to build for CA_v1
+18:26:22 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:51:16: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+   rand_num = ( rand() % (r - l + 1))+l;
+                ^~~~
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+gcc -o CA_v1.exe CA.o main.o 
+18:27:30 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:17:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:19:15: warning: unused variable 'i' [-Wunused-variable]
+  volatile int i;
+               ^
+gcc -o CA_v1.exe CA.o main.o 
+Info: Nothing to build for CA_v1
+18:29:49 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:28:14: error: void value not ignored as it ought to be
+  CA_distance = Get_distance_random(45,55,1);
+              ^
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:40:15: error: void value not ignored as it ought to be
+   CA_distance = Get_distance_random(45,55,1);
+               ^
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+18:29:55 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:28:14: error: void value not ignored as it ought to be
+  CA_distance = Get_distance_random(45,55,1);
+              ^
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:40:15: error: void value not ignored as it ought to be
+   CA_distance = Get_distance_random(45,55,1);
+               ^
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+18:30:53 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:28:14: error: void value not ignored as it ought to be
+  CA_distance = Get_distance_random(45,55,1);
+              ^
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:40:15: error: void value not ignored as it ought to be
+   CA_distance = Get_distance_random(45,55,1);
+               ^
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:52:10: warning: 'return' with a value, in function returning void
+   return rand_num;
+          ^~~~~~~~
+..\CA.c:46:6: note: declared here
+ void Get_distance_random(int l,int r, int count)
+      ^~~~~~~~~~~~~~~~~~~
+18:31:25 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o CA_v1.exe CA.o main.o 
+Info: Nothing to build for CA_v1
+23:42:21 **** Rebuild of configuration Debug for project CA_v2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o US.o "..\\US.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:30:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:30:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:30:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:42:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:42:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'Get_distance_random':
+..\CA.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o DC.o "..\\DC.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:17:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:19:15: warning: unused variable 'i' [-Wunused-variable]
+  volatile int i;
+               ^
+gcc -o CA_v2.exe CA.o DC.o US.o main.o 
+Info: Nothing to build for CA_v1
+00:29:43 **** Incremental Build of configuration Debug for project CA_v2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o US.o "..\\US.c" 
+..\US.c: In function 'US_init':
+..\US.c:20:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("US init\n");
+  ^~~~~~
+..\US.c:20:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\US.c:20:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'ST_US_busy':
+..\US.c:27:2: error: 'US_state_id' undeclared (first use in this function)
+  US_state_id = US_busy;
+  ^~~~~~~~~~~
+..\US.c:27:2: note: each undeclared identifier is reported only once for each function it appears in
+..\US.c:27:16: error: 'US_busy' undeclared (first use in this function)
+  US_state_id = US_busy;
+                ^~~~~~~
+..\US.c:30:2: error: 'CA_distance' undeclared (first use in this function)
+  CA_distance = Get_distance_random(45,55,1);
+  ^~~~~~~~~~~
+..\US.c:31:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA_waiting State:  distance=%d \n",US_distance);
+  ^~~~~~
+..\US.c:31:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'Get_distance_random':
+..\US.c:46:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Info: Nothing to build for CA_v1
+00:30:21 **** Incremental Build of configuration Debug for project CA_v2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o DC.o "..\\DC.c" 
+..\DC.c: In function 'DC_init':
+..\DC.c:20:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("DC init \n");
+  ^~~~~~
+..\DC.c:20:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\DC.c:20:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ..\DC.h:11:0,
+                 from ..\DC.c:10:
+..\DC.c: In function 'DC_motor':
+..\state.h:12:29: warning: statement with no effect [-Wunused-value]
+ #define STATE(_statFUN_)    ST_##_statFUN_
+                             ^
+..\DC.c:27:2: note: in expansion of macro 'STATE'
+  STATE(DC_busy);
+  ^~~~~
+..\DC.c:28:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA---------Speed = %d -------DC \n",DC_speed);
+  ^~~~~~
+..\DC.c:28:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\DC.c: In function 'ST_DC_idle':
+..\DC.c:38:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("DC_idle State: speed=%d  distance=%d \n",DC_speed);
+  ^~~~~~
+..\DC.c:38:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\DC.c:38:45: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  printf("DC_idle State: speed=%d  distance=%d \n",DC_speed);
+                                             ^
+..\DC.c: In function 'ST_DC_busy':
+..\DC.c:49:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("DC_busy State: speed=%d \n",DC_speed);
+  ^~~~~~
+..\DC.c:49:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o US.o "..\\US.c" 
+..\US.c: In function 'US_init':
+..\US.c:20:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("US init\n");
+  ^~~~~~
+..\US.c:20:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\US.c:20:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'ST_US_busy':
+..\US.c:30:2: error: 'CA_distance' undeclared (first use in this function)
+  CA_distance = Get_distance_random(45,55,1);
+  ^~~~~~~~~~~
+..\US.c:30:2: note: each undeclared identifier is reported only once for each function it appears in
+..\US.c:31:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA_waiting State:  distance=%d \n",US_distance);
+  ^~~~~~
+..\US.c:31:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'Get_distance_random':
+..\US.c:46:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Info: Nothing to build for CA_v1
+00:30:31 **** Incremental Build of configuration Debug for project CA_v2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:16: warning: missing terminating " character
+ #include "DC.h""
+                ^
+..\main.c:10:16: warning: extra tokens at end of #include directive
+..\main.c:24:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:26:15: warning: unused variable 'i' [-Wunused-variable]
+  volatile int i;
+               ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o US.o "..\\US.c" 
+..\US.c: In function 'US_init':
+..\US.c:20:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("US init\n");
+  ^~~~~~
+..\US.c:20:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\US.c:20:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'ST_US_busy':
+..\US.c:31:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA_waiting State:  distance=%d \n",US_distance);
+  ^~~~~~
+..\US.c:31:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'Get_distance_random':
+..\US.c:46:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'US_set_distance':
+..\CA.c:23:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("US---------distance = %d -------CA \n",CA_distance);
+  ^~~~~~
+..\CA.c:23:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:23:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:32:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:32:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:43:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:43:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -o CA_v2.exe CA.o DC.o US.o main.o 
+Info: Nothing to build for CA_v2
+00:31:06 **** Incremental Build of configuration Debug for project CA_v2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o US.o "..\\US.c" 
+..\US.c: In function 'US_init':
+..\US.c:20:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("US init\n");
+  ^~~~~~
+..\US.c:20:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\US.c:20:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'ST_US_busy':
+..\US.c:31:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA_waiting State:  distance=%d \n",US_distance);
+  ^~~~~~
+..\US.c:31:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'Get_distance_random':
+..\US.c:47:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o CA_v2.exe CA.o DC.o US.o main.o 
+Info: Nothing to build for CA_v2
+Info: Nothing to build for CA_v1
+01:23:38 **** Incremental Build of configuration Debug for project CA_v1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:17:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:19:15: warning: unused variable 'i' [-Wunused-variable]
+  volatile int i;
+               ^
+gcc -o CA_v1.exe CA.o main.o 
+Info: Nothing to build for CA_v1
+01:27:33 **** Rebuild of configuration Debug for project CA_v2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o US.o "..\\US.c" 
+..\US.c: In function 'US_init':
+..\US.c:20:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("US init\n");
+  ^~~~~~
+..\US.c:20:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\US.c:20:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'ST_US_busy':
+..\US.c:31:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA_waiting State:  distance=%d \n",US_distance);
+  ^~~~~~
+..\US.c:31:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\US.c: In function 'Get_distance_random':
+..\US.c:47:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o CA.o "..\\CA.c" 
+..\CA.c: In function 'US_set_distance':
+..\CA.c:23:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("US---------distance = %d -------CA \n",CA_distance);
+  ^~~~~~
+..\CA.c:23:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\CA.c:23:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_waiting':
+..\CA.c:32:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+  ^~~~~~
+..\CA.c:32:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\CA.c: In function 'ST_CA_driving':
+..\CA.c:43:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("CA_waiting State: speed=%d  distance=%d \n",CA_speed,CA_distance);
+   ^~~~~~
+..\CA.c:43:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o DC.o "..\\DC.c" 
+..\DC.c: In function 'DC_init':
+..\DC.c:20:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("DC init \n");
+  ^~~~~~
+..\DC.c:20:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\DC.c:20:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ..\DC.h:11:0,
+                 from ..\DC.c:10:
+..\DC.c: In function 'DC_motor':
+..\state.h:12:29: warning: statement with no effect [-Wunused-value]
+ #define STATE(_statFUN_)    ST_##_statFUN_
+                             ^
+..\DC.c:27:2: note: in expansion of macro 'STATE'
+  STATE(DC_busy);
+  ^~~~~
+..\DC.c:28:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("CA---------Speed = %d -------DC \n",DC_speed);
+  ^~~~~~
+..\DC.c:28:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\DC.c: In function 'ST_DC_idle':
+..\DC.c:38:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("DC_idle State: speed=%d  distance=%d \n",DC_speed);
+  ^~~~~~
+..\DC.c:38:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\DC.c:38:45: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  printf("DC_idle State: speed=%d  distance=%d \n",DC_speed);
+                                             ^
+..\DC.c: In function 'ST_DC_busy':
+..\DC.c:49:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("DC_busy State: speed=%d \n",DC_speed);
+  ^~~~~~
+..\DC.c:49:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:10:16: warning: missing terminating " character
+ #include "DC.h""
+                ^
+..\main.c:10:16: warning: extra tokens at end of #include directive
+..\main.c:24:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:26:15: warning: unused variable 'i' [-Wunused-variable]
+  volatile int i;
+               ^
+gcc -o CA_v2.exe CA.o DC.o US.o main.o 
+Info: Nothing to build for CA_v2

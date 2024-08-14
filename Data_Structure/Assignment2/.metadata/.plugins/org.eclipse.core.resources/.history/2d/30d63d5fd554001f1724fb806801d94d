@@ -1,0 +1,18 @@
+/*
+ * CA.c
+ *
+ *  Created on: 7 Aug 2024
+ *      Author: Mostafa Mourad
+ */
+
+
+#include "state.h"
+
+
+int CA_speed=0;
+int CA_distance =0;
+int CA_threshold =50;
+
+
+//state pointer to function.
+void (*CA_state)();

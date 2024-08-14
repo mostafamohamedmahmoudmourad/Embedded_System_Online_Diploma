@@ -1,0 +1,25 @@
+/*
+ * lifo.c
+ *
+ *  Created on: 2 Aug 2024
+ *      Author: HP
+ */
+
+#include "lifo.h"
+
+LIFO_status LIFO_init (LIFO_BUF_T* lifo_buf, unsigned int* buf, unsigned int length)
+{
+	if(buf == NULL)
+		return LIFO_NULL;
+
+
+}
+LIFO_status LIFO_Add_item (LIFO_BUF_T* lifo_buf, unsigned int item)
+{
+
+}
+LIFO_status LIFO_get_item (LIFO_BUF_T* lifo_buf, unsigned int* item)
+{
+
+}
+

@@ -1,0 +1,50 @@
+/*
+ * main.c
+ *
+ *  Created on: 3 Aug 2024
+ *      Author: Mostafa Mourad
+ */
+
+#include "lifo.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+// Static buffer allocation
+unsigned int buffer1[5];
+
+int main()
+{
+    int i, temp = 0;
+    LIFO_BUF_T uart_lifo, I2C_lifo;
+
+    // Initialize the uart_lifo with a statically allocated buffer
+    LIFO_init(&uart_lifo, buffer1, 5);
+
+    // Dynamically allocate memory for I2C_lifo buffer
+    unsigned int* buffer2 = (unsigned int*)malloc(5 * sizeof(unsigned int));
+    // Initialize the I2C_lifo with the dynamically allocated buffer
+    LIFO_init(&I2C_lifo, buffer2, 5);
+
+    // Adding items to uart_lifo
+    for (i = 0; i < 7; i++)
+    {
+        if (LIFO_Add_item(&uart_lifo, i) == LIFO_no_error)  // Check if adding item was successful
+            printf("UART_LIFO Add: %d\n", i);  // Print the added item
+        else
+            printf("UART_LIFO is full at: %d\n", i);  // Indicate the LIFO buffer is full
+    }
+
+    // Getting items from uart_lifo
+    for (i = 0; i < 7; i++)
+    {
+        if (LIFO_get_item(&uart_lifo, &temp) == LIFO_no_empty)  // Check if getting item was successful
+            printf("UART_LIFO Get: %d\n", temp);  // Print the retrieved item
+        else
+            printf("UART_LIFO is empty at: %d\n", i);  // Indicate the LIFO buffer is empty
+    }
+
+    // Free the dynamically allocated memory for I2C_lifo
+    free(buffer2);
+
+    return 0;
+}

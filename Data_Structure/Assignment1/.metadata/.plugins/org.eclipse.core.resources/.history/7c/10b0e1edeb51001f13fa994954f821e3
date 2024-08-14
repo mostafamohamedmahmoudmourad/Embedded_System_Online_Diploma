@@ -1,0 +1,38 @@
+/*
+ * main.c
+ *
+ *  Created on: 4 Aug 2024
+ *      Author: Mostafa Mourad
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <stddef.h>
+
+
+struct Sdata {
+	int ID ;
+	char name[40];
+	float leight;
+};
+
+struct SStudent
+{
+	struct Sdata student;
+	struct SStudent* PNextStudent;
+};
+
+struct SStudent* gpFirstStudent = NULL;
+
+
+
+void AddStudent()
+{
+	if(gpFirstStudent==NULL)
+
+
+
+}

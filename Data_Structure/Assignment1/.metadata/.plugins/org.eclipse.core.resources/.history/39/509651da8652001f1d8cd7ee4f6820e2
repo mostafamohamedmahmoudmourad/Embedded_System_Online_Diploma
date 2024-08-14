@@ -1,0 +1,210 @@
+/*
+ * main.c
+ *
+ *  Created on: 4 Aug 2024
+ *      Author: Mostafa Mourad
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <stddef.h>
+
+setbuf(stdout,NULL);
+
+
+struct Sdata {
+	int ID ;
+	char name[40];
+	float leight;
+};
+
+struct SStudent
+{
+	struct Sdata student;
+	struct SStudent* PNextStudent;
+};
+
+struct SStudent* gpFirstStudent = NULL;
+
+
+
+void AddStudent()
+{
+	struct SStudent* pNewStudent;
+	struct SStudent* pLastStudent;
+	char temp_text[40];
+	if(gpFirstStudent==NULL)
+	{
+		pNewStudent = (struct SStudent*)malloc(sizeof(struct SStudent));
+
+		gpFirstStudent = pNewStudent;
+	}
+	else
+	{
+		pLastStudent = gpFirstStudent;
+		while(pLastStudent->PNextStudent)
+			pLastStudent = pLastStudent->PNextStudent;
+		pNewStudent = (struct SStudent*)malloc(sizeof(struct SStudent));
+		pLastStudent->PNextStudent = pNewStudent;
+	}
+	//full new record
+	printf("\n Enter the ID: ");
+	gets(temp_text);
+	pNewStudent->student.ID = atoi(temp_text);
+
+	printf("\n Enter student full name: ");
+	gets(pNewStudent->student.name);
+
+
+	printf("\n Enter the height: ");
+	gets(temp_text);
+	pNewStudent->student.leight = atof(temp_text);
+	//set the next pointer null.
+	pNewStudent->PNextStudent = NULL;
+
+}
+
+void delete_student()
+{
+	char temp_text[40];
+	unsigned int selected_id;
+
+	printf("\n Enter the student id to be deleted: ");
+	gets(temp_text);
+	selected_id = atoi(temp_text);
+
+	if(gpFirstStudent)
+	{
+		struct SStudent* pSelectedStudent = gpFirstStudent;
+		struct SStudent* pPreviousStudent = NULL;
+
+		while(pSelectedStudent)
+		{
+			if(pSelectedStudent->student.ID == selected_id)
+			{
+				if(pPreviousStudent)
+				{
+					pPreviousStudent->PNextStudent = pSelectedStudent->PNextStudent;
+				}
+				else
+				{
+					gpFirstStudent = pSelectedStudent->PNextStudent;
+				}
+				free(pSelectedStudent);
+				return 1;
+			}
+			pPreviousStudent = pSelectedStudent;
+			pSelectedStudent = pSelectedStudent->PNextStudent;
+		}
+	}
+	printf("\n cannot find student ID.");
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+void viwe_students()
+{
+	struct SStudent* pCurrentStudent = gpFirstStudent;
+	int count = 0;
+	if(gpFirstStudent == NULL)
+	{
+		printf("\n Empty list");
+	}
+	else
+	{
+		while(pCurrentStudent)
+		{
+			printf("\n record number %d", count+1);
+			printf("\n \t ID: %d",pCurrentStudent->student.ID);
+			printf("\n \t Name: %s",pCurrentStudent->student.name);
+			printf("\n \t Height: %f ",pCurrentStudent->student.leight);
+			pCurrentStudent = pCurrentStudent->PNextStudent;
+			count++;
+		}
+	}
+}
+
+
+
+
+
+
+
+void DeleteAll()
+{
+	struct SStudent* pCurrentStudent = gpFirstStudent;
+	if(gpFirstStudent == NULL)
+	{
+		printf("\n Empty list");
+	}
+	else
+	{
+		while(pCurrentStudent)
+		{
+			struct SStudent* pTempStudent = pCurrentStudent;
+			pCurrentStudent = pCurrentStudent->PNextStudent;
+			free(pTempStudent);
+		}
+		gpFirstStudent = NULL;
+	}
+}
+
+
+
+
+
+
+void main ()
+{
+	setbuf(stdout,NULL);
+	char temp_text[40];
+	while(1)
+	{
+		printf("\n ========================");
+		printf("\n\t Choose on of the following Options \n");
+		printf("\n 1: AddStudent ");
+		printf("\n 2: Delete_Student ");
+		printf("\n 3: View_Student ");
+		printf("\n 4: DeleteAll ");
+		printf("\n Enter Option Number: ");
+
+		gets(temp_text);
+		printf("\n=========================");
+		switch(atoi(temp_text))
+		{
+		case 1:
+			AddStudent();
+			break;
+		case 2:
+			delete_student();
+			break;
+		case 3:
+			viwe_students();
+			break;
+		case 4:
+			DeleteAll();
+			break;
+		default:
+			printf("\n Wrong option ");
+			break;
+		}
+
+	}
+
+
+
+
+
+}
+
+

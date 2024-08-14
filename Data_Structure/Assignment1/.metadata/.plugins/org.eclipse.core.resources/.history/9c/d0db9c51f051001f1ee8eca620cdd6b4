@@ -1,0 +1,66 @@
+/*
+ * main.c
+ *
+ *  Created on: 4 Aug 2024
+ *      Author: Mostafa Mourad
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <stddef.h>
+
+
+struct Sdata {
+	int ID ;
+	char name[40];
+	float leight;
+};
+
+struct SStudent
+{
+	struct Sdata student;
+	struct SStudent* PNextStudent;
+};
+
+struct SStudent* gpFirstStudent = NULL;
+
+
+
+void AddStudent()
+{
+	struct SStudent* pNewStudent;
+	struct SStudent* pLastStudent;
+	char temp_text[40];
+	if(gpFirstStudent==NULL)
+	{
+		pNewStudent = (struct SStudent*)malloc(sizeof(struct SStudent));
+
+		gpFirstStudent = pNewStudent;
+	}
+	else
+	{
+		pLastStudent = gpFirstStudent;
+		while(pLastStudent->PNextStudent)
+			pLastStudent = pLastStudent->PNextStudent;
+		pNewStudent = (struct SStudent*)malloc(sizeof(struct SStudent));
+		pLastStudent->PNextStudent = pNewStudent;
+	}
+	//full new record
+	printf("\n Enter the ID: ");
+	gets(temp_text);
+	pNewStudent->student.ID = atoi(temp_text);
+
+	printf("\n Enter student full name: ");
+	gets(pNewStudent->student.name);
+
+
+	printf("\n Enter the height: ");
+	gets(temp_text);
+	pNewStudent->student.leight = atof(temp_text);
+	//set the next pointer null.
+	pNewStudent->PNextStudent = NULL;
+
+}

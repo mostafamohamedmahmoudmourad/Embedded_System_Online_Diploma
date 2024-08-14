@@ -1,0 +1,14 @@
+/*
+ * fifo.c
+ *
+ *  Created on: 3 Aug 2024
+ *  	Author: Mostafa Mourad
+ */
+
+
+
+FIFO_Buf_status FIFO_init(FIFO_Buf_t* fifo, element_type* buf, unsigned int length);
+FIFO_Buf_status FIFO_enqueue (FIFO_Buf_t* fifo, element_type item);
+FIFO_Buf_status FIFO_dequeue (FIFO_Buf_t* fifo, element_type* item);
+FIFO_Buf_status FIFO_IS_FULL (FIFO_Buf_t* fifo);
+FIFO_Buf_status FIFO_print (FIFO_Buf_t* fifo);
