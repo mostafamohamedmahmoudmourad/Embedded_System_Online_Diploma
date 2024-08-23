@@ -1,0 +1,7 @@
+03:35:20 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+
+03:35:20 Build Finished. 0 errors, 0 warnings. (took 397ms)
+

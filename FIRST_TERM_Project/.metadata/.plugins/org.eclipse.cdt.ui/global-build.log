@@ -1,0 +1,778 @@
+10:49:56 **** Rebuild of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+..\FIFO.c: In function 'FIFO_print':
+..\FIFO.c:71:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+..\FIFO.c: In function 'FIFO_Find_student_with_rollnumber':
+..\FIFO.c:103:17: error: request for member 'roll' in something not a structure or union
+   if(roll == ptr->roll)
+                 ^~
+..\FIFO.c: In function 'FIFO_Find_student_with_fname':
+..\FIFO.c:124:6: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   if(strcmp(fname,ptr->fname) == 0)
+      ^~~~~~
+..\FIFO.c:124:22: error: request for member 'fname' in something not a structure or union
+   if(strcmp(fname,ptr->fname) == 0)
+                      ^~
+..\FIFO.c:129:40: error: request for member 'fname' in something not a structure or union
+    printf("The First name is %s \n",ptr->fname);
+                                        ^~
+..\FIFO.c:130:39: error: request for member 'lname' in something not a structure or union
+    printf("The Last name is %s \n",ptr->lname);
+                                       ^~
+..\FIFO.c:131:38: error: request for member 'roll' in something not a structure or union
+    printf("The Roll Number is %d",ptr->roll);
+                                      ^~
+..\FIFO.c:132:36: error: request for member 'GPA' in something not a structure or union
+    printf("The GPA is %0.1f \n",ptr->GPA);
+                                    ^~
+..\FIFO.c:136:41: error: request for member 'cid' in something not a structure or union
+     printf("The Course ID is: %d \n",ptr->cid[i]);
+                                         ^~
+..\FIFO.c: In function 'FIFO_Find_students_with_CID':
+..\FIFO.c:157:23: error: request for member 'cid' in something not a structure or union
+    if((courseId == ptr->cid[course] ))
+                       ^~
+..\FIFO.c:162:42: error: request for member 'fname' in something not a structure or union
+     printf(" The First name is %s \n",ptr->fname);
+                                          ^~
+..\FIFO.c:163:41: error: request for member 'lname' in something not a structure or union
+     printf(" The Last name is %s \n",ptr->lname);
+                                         ^~
+..\FIFO.c:164:40: error: request for member 'roll' in something not a structure or union
+     printf(" The Roll Number is %d",ptr->roll);
+                                        ^~
+..\FIFO.c:165:38: error: request for member 'GPA' in something not a structure or union
+     printf(" The GPA is %0.1f \n",ptr->GPA);
+                                      ^~
+..\FIFO.c: In function 'FIFO_enqueue_specific_info':
+..\FIFO.c:185:7: error: 'ROLL_NUMNBER_INDEX' undeclared (first use in this function)
+  case ROLL_NUMNBER_INDEX:
+       ^~~~~~~~~~~~~~~~~~
+..\FIFO.c:185:7: note: each undeclared identifier is reported only once for each function it appears in
+..\FIFO.c:186:10: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   roll = atoi(token);
+          ^~~~
+..\FIFO.c:194:14: error: request for member 'roll' in something not a structure or union
+    fifo->head->roll = roll;
+              ^~
+..\FIFO.c:197:8: error: 'F_NAME_INDEX' undeclared (first use in this function)
+  case  F_NAME_INDEX:
+        ^~~~~~~~~~~~
+..\FIFO.c:198:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(fifo->head->fname,token);
+   ^~~~~~
+..\FIFO.c:198:3: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\FIFO.c:198:3: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\FIFO.c:198:20: error: request for member 'fname' in something not a structure or union
+   strcpy(fifo->head->fname,token);
+                    ^~
+..\FIFO.c:200:7: error: 'L_NAME_INDEX' undeclared (first use in this function)
+  case L_NAME_INDEX:
+       ^~~~~~~~~~~~
+..\FIFO.c:201:20: error: request for member 'lname' in something not a structure or union
+   strcpy(fifo->head->lname,token);
+                    ^~
+..\FIFO.c:203:7: error: 'GPA_INDEX' undeclared (first use in this function)
+  case GPA_INDEX:
+       ^~~~~~~~~
+..\FIFO.c:204:13: error: request for member 'GPA' in something not a structure or union
+   fifo->head->GPA = atof(token);
+             ^~
+..\FIFO.c:204:21: warning: implicit declaration of function 'atof' [-Wimplicit-function-declaration]
+   fifo->head->GPA = atof(token);
+                     ^~~~
+..\FIFO.c:206:7: error: 'CID_INDEX' undeclared (first use in this function)
+  case CID_INDEX:
+       ^~~~~~~~~
+..\FIFO.c:209:14: error: request for member 'cid' in something not a structure or union
+    fifo->head->cid[course_index] = atoi(token);
+              ^~
+..\FIFO.c:211:12: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+    token = strtok(NULL, " ");
+            ^~~~~~
+..\FIFO.c:211:10: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    token = strtok(NULL, " ");
+          ^
+..\FIFO.c:213:65: error: request for member 'roll' in something not a structure or union
+   printf("[INFO] Roll Number %d saved successfully\n",fifo->head->roll);
+                                                                 ^~
+..\FIFO.c: In function 'FIFO_delete_student':
+..\FIFO.c:226:17: error: request for member 'roll' in something not a structure or union
+  int roll = item->roll;
+                 ^~
+..\FIFO.c:227:26: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* ptrNext = item;
+                          ^~~~
+..\FIFO.c:228:16: warning: comparison of distinct pointer types lacks a cast
+  while(ptrNext != fifo->head)
+                ^~
+..\FIFO.c:231:15: warning: comparison of distinct pointer types lacks a cast
+   if (ptrNext == fifo->base + (fifo->length - 1))
+               ^~
+..\FIFO.c:232:12: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+    ptrNext = fifo->base;
+            ^
+..\FIFO.c:234:11: error: increment of pointer to an incomplete type 'struct sinfo'
+    ptrNext++;
+           ^~
+..\FIFO.c:235:11: error: dereferencing pointer to incomplete type 'struct sinfo'
+   *item = *ptrNext;
+           ^~~~~~~~
+..\FIFO.c:236:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   item = ptrNext;
+        ^
+10:51:31 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'setup':
+..\StudentManagement.c:23:39: error: 'width1' undeclared (first use in this function)
+  if(FIFO_init(&FIFO_Student, student, width1) == FIFO_no_error)
+                                       ^~~~~~
+..\StudentManagement.c:23:39: note: each undeclared identifier is reported only once for each function it appears in
+..\StudentManagement.c:23:30: warning: passing argument 2 of 'FIFO_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(FIFO_init(&FIFO_Student, student, width1) == FIFO_no_error)
+                              ^~~~~~~
+In file included from ..\StudentManagement.c:14:0:
+..\FIFO.h:36:17: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'struct sinfo *'
+ FIFO_Buf_status FIFO_init(FIFO_Buf_t* fifo, element_type* buf, unsigned int length);
+                 ^~~~~~~~~
+..\StudentManagement.c: In function 'add_students_manually':
+..\StudentManagement.c:82:29: warning: passing argument 2 of 'FIFO_enqueue' makes integer from pointer without a cast [-Wint-conversion]
+  FIFO_enqueue(&FIFO_Student,&temp_student);
+                             ^
+In file included from ..\StudentManagement.c:14:0:
+..\FIFO.h:37:17: note: expected 'uint8_t {aka unsigned char}' but argument is of type 'struct sinfo *'
+ FIFO_Buf_status FIFO_enqueue (FIFO_Buf_t* fifo, element_type item);
+                 ^~~~~~~~~~~~
+..\StudentManagement.c: In function 'findstudent_using_rollnum':
+..\StudentManagement.c:93:31: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* temp_student = FIFO_Find_student_with_rollnumber(&FIFO_Student, roll);
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c: In function 'delete_student':
+..\StudentManagement.c:147:29: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* ptrStudent = FIFO_Find_student_with_rollnumber(&FIFO_Student, roll);
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c:154:37: warning: passing argument 2 of 'FIFO_delete_student' from incompatible pointer type [-Wincompatible-pointer-types]
+   FIFO_delete_student(&FIFO_Student,ptrStudent);
+                                     ^~~~~~~~~~
+In file included from ..\StudentManagement.c:14:0:
+..\FIFO.h:48:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'struct sinfo *'
+ void FIFO_delete_student(FIFO_Buf_t * fifo, element_type* item);
+      ^~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c: In function 'update_student_info':
+..\StudentManagement.c:165:31: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* temp_student = FIFO_Find_student_with_rollnumber(&FIFO_Student, choice);
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10:52:12 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'setup':
+..\StudentManagement.c:23:30: warning: passing argument 2 of 'FIFO_init' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(FIFO_init(&FIFO_Student, student, width) == FIFO_no_error)
+                              ^~~~~~~
+In file included from ..\StudentManagement.c:14:0:
+..\FIFO.h:36:17: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'struct sinfo *'
+ FIFO_Buf_status FIFO_init(FIFO_Buf_t* fifo, element_type* buf, unsigned int length);
+                 ^~~~~~~~~
+..\StudentManagement.c: In function 'add_students_manually':
+..\StudentManagement.c:82:29: warning: passing argument 2 of 'FIFO_enqueue' makes integer from pointer without a cast [-Wint-conversion]
+  FIFO_enqueue(&FIFO_Student,&temp_student);
+                             ^
+In file included from ..\StudentManagement.c:14:0:
+..\FIFO.h:37:17: note: expected 'uint8_t {aka unsigned char}' but argument is of type 'struct sinfo *'
+ FIFO_Buf_status FIFO_enqueue (FIFO_Buf_t* fifo, element_type item);
+                 ^~~~~~~~~~~~
+..\StudentManagement.c: In function 'findstudent_using_rollnum':
+..\StudentManagement.c:93:31: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* temp_student = FIFO_Find_student_with_rollnumber(&FIFO_Student, roll);
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c: In function 'delete_student':
+..\StudentManagement.c:147:29: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* ptrStudent = FIFO_Find_student_with_rollnumber(&FIFO_Student, roll);
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c:154:37: warning: passing argument 2 of 'FIFO_delete_student' from incompatible pointer type [-Wincompatible-pointer-types]
+   FIFO_delete_student(&FIFO_Student,ptrStudent);
+                                     ^~~~~~~~~~
+In file included from ..\StudentManagement.c:14:0:
+..\FIFO.h:48:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'struct sinfo *'
+ void FIFO_delete_student(FIFO_Buf_t * fifo, element_type* item);
+      ^~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c: In function 'update_student_info':
+..\StudentManagement.c:165:31: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* temp_student = FIFO_Find_student_with_rollnumber(&FIFO_Student, choice);
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+..\FIFO.c: In function 'FIFO_print':
+..\FIFO.c:71:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+..\FIFO.c: In function 'FIFO_Find_student_with_rollnumber':
+..\FIFO.c:103:17: error: request for member 'roll' in something not a structure or union
+   if(roll == ptr->roll)
+                 ^~
+..\FIFO.c: In function 'FIFO_Find_student_with_fname':
+..\FIFO.c:124:6: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   if(strcmp(fname,ptr->fname) == 0)
+      ^~~~~~
+..\FIFO.c:124:22: error: request for member 'fname' in something not a structure or union
+   if(strcmp(fname,ptr->fname) == 0)
+                      ^~
+..\FIFO.c:129:40: error: request for member 'fname' in something not a structure or union
+    printf("The First name is %s \n",ptr->fname);
+                                        ^~
+..\FIFO.c:130:39: error: request for member 'lname' in something not a structure or union
+    printf("The Last name is %s \n",ptr->lname);
+                                       ^~
+..\FIFO.c:131:38: error: request for member 'roll' in something not a structure or union
+    printf("The Roll Number is %d",ptr->roll);
+                                      ^~
+..\FIFO.c:132:36: error: request for member 'GPA' in something not a structure or union
+    printf("The GPA is %0.1f \n",ptr->GPA);
+                                    ^~
+..\FIFO.c:136:41: error: request for member 'cid' in something not a structure or union
+     printf("The Course ID is: %d \n",ptr->cid[i]);
+                                         ^~
+..\FIFO.c: In function 'FIFO_Find_students_with_CID':
+..\FIFO.c:157:23: error: request for member 'cid' in something not a structure or union
+    if((courseId == ptr->cid[course] ))
+                       ^~
+..\FIFO.c:162:42: error: request for member 'fname' in something not a structure or union
+     printf(" The First name is %s \n",ptr->fname);
+                                          ^~
+..\FIFO.c:163:41: error: request for member 'lname' in something not a structure or union
+     printf(" The Last name is %s \n",ptr->lname);
+                                         ^~
+..\FIFO.c:164:40: error: request for member 'roll' in something not a structure or union
+     printf(" The Roll Number is %d",ptr->roll);
+                                        ^~
+..\FIFO.c:165:38: error: request for member 'GPA' in something not a structure or union
+     printf(" The GPA is %0.1f \n",ptr->GPA);
+                                      ^~
+..\FIFO.c: In function 'FIFO_enqueue_specific_info':
+..\FIFO.c:186:10: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   roll = atoi(token);
+          ^~~~
+..\FIFO.c:194:14: error: request for member 'roll' in something not a structure or union
+    fifo->head->roll = roll;
+              ^~
+..\FIFO.c:198:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(fifo->head->fname,token);
+   ^~~~~~
+..\FIFO.c:198:3: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\FIFO.c:198:3: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\FIFO.c:198:20: error: request for member 'fname' in something not a structure or union
+   strcpy(fifo->head->fname,token);
+                    ^~
+..\FIFO.c:201:20: error: request for member 'lname' in something not a structure or union
+   strcpy(fifo->head->lname,token);
+                    ^~
+..\FIFO.c:204:13: error: request for member 'GPA' in something not a structure or union
+   fifo->head->GPA = atof(token);
+             ^~
+..\FIFO.c:204:21: warning: implicit declaration of function 'atof' [-Wimplicit-function-declaration]
+   fifo->head->GPA = atof(token);
+                     ^~~~
+..\FIFO.c:209:14: error: request for member 'cid' in something not a structure or union
+    fifo->head->cid[course_index] = atoi(token);
+              ^~
+..\FIFO.c:211:12: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+    token = strtok(NULL, " ");
+            ^~~~~~
+..\FIFO.c:211:10: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    token = strtok(NULL, " ");
+          ^
+..\FIFO.c:213:65: error: request for member 'roll' in something not a structure or union
+   printf("[INFO] Roll Number %d saved successfully\n",fifo->head->roll);
+                                                                 ^~
+..\FIFO.c: In function 'FIFO_delete_student':
+..\FIFO.c:226:17: error: request for member 'roll' in something not a structure or union
+  int roll = item->roll;
+                 ^~
+..\FIFO.c:227:26: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* ptrNext = item;
+                          ^~~~
+..\FIFO.c:228:16: warning: comparison of distinct pointer types lacks a cast
+  while(ptrNext != fifo->head)
+                ^~
+..\FIFO.c:231:15: warning: comparison of distinct pointer types lacks a cast
+   if (ptrNext == fifo->base + (fifo->length - 1))
+               ^~
+..\FIFO.c:232:12: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+    ptrNext = fifo->base;
+            ^
+..\FIFO.c:235:9: error: incompatible types when assigning to type 'uint8_t {aka unsigned char}' from type 'struct sinfo'
+   *item = *ptrNext;
+         ^
+..\FIFO.c:236:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   item = ptrNext;
+        ^
+10:54:43 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+..\FIFO.c: In function 'FIFO_print':
+..\FIFO.c:71:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+..\FIFO.c: In function 'FIFO_Find_student_with_rollnumber':
+..\FIFO.c:103:17: error: request for member 'student' in something not a structure or union
+   if(roll == ptr->student.roll)
+                 ^~
+..\FIFO.c: In function 'FIFO_Find_student_with_fname':
+..\FIFO.c:124:6: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   if(strcmp(fname,ptr->fname) == 0)
+      ^~~~~~
+..\FIFO.c:124:22: error: request for member 'fname' in something not a structure or union
+   if(strcmp(fname,ptr->fname) == 0)
+                      ^~
+..\FIFO.c:129:40: error: request for member 'fname' in something not a structure or union
+    printf("The First name is %s \n",ptr->fname);
+                                        ^~
+..\FIFO.c:130:39: error: request for member 'lname' in something not a structure or union
+    printf("The Last name is %s \n",ptr->lname);
+                                       ^~
+..\FIFO.c:131:38: error: request for member 'roll' in something not a structure or union
+    printf("The Roll Number is %d",ptr->roll);
+                                      ^~
+..\FIFO.c:132:36: error: request for member 'GPA' in something not a structure or union
+    printf("The GPA is %0.1f \n",ptr->GPA);
+                                    ^~
+..\FIFO.c:136:41: error: request for member 'cid' in something not a structure or union
+     printf("The Course ID is: %d \n",ptr->cid[i]);
+                                         ^~
+..\FIFO.c: In function 'FIFO_Find_students_with_CID':
+..\FIFO.c:157:23: error: request for member 'cid' in something not a structure or union
+    if((courseId == ptr->cid[course] ))
+                       ^~
+..\FIFO.c:162:42: error: request for member 'fname' in something not a structure or union
+     printf(" The First name is %s \n",ptr->fname);
+                                          ^~
+..\FIFO.c:163:41: error: request for member 'lname' in something not a structure or union
+     printf(" The Last name is %s \n",ptr->lname);
+                                         ^~
+..\FIFO.c:164:40: error: request for member 'roll' in something not a structure or union
+     printf(" The Roll Number is %d",ptr->roll);
+                                        ^~
+..\FIFO.c:165:38: error: request for member 'GPA' in something not a structure or union
+     printf(" The GPA is %0.1f \n",ptr->GPA);
+                                      ^~
+..\FIFO.c: In function 'FIFO_enqueue_specific_info':
+..\FIFO.c:186:10: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   roll = atoi(token);
+          ^~~~
+..\FIFO.c:194:14: error: request for member 'roll' in something not a structure or union
+    fifo->head->roll = roll;
+              ^~
+..\FIFO.c:198:3: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   strcpy(fifo->head->fname,token);
+   ^~~~~~
+..\FIFO.c:198:3: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\FIFO.c:198:3: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\FIFO.c:198:20: error: request for member 'fname' in something not a structure or union
+   strcpy(fifo->head->fname,token);
+                    ^~
+..\FIFO.c:201:20: error: request for member 'lname' in something not a structure or union
+   strcpy(fifo->head->lname,token);
+                    ^~
+..\FIFO.c:204:13: error: request for member 'GPA' in something not a structure or union
+   fifo->head->GPA = atof(token);
+             ^~
+..\FIFO.c:204:21: warning: implicit declaration of function 'atof' [-Wimplicit-function-declaration]
+   fifo->head->GPA = atof(token);
+                     ^~~~
+..\FIFO.c:209:14: error: request for member 'cid' in something not a structure or union
+    fifo->head->cid[course_index] = atoi(token);
+              ^~
+..\FIFO.c:211:12: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+    token = strtok(NULL, " ");
+            ^~~~~~
+..\FIFO.c:211:10: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    token = strtok(NULL, " ");
+          ^
+..\FIFO.c:213:65: error: request for member 'roll' in something not a structure or union
+   printf("[INFO] Roll Number %d saved successfully\n",fifo->head->roll);
+                                                                 ^~
+..\FIFO.c: In function 'FIFO_delete_student':
+..\FIFO.c:226:17: error: request for member 'roll' in something not a structure or union
+  int roll = item->roll;
+                 ^~
+..\FIFO.c:227:26: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* ptrNext = item;
+                          ^~~~
+..\FIFO.c:228:16: warning: comparison of distinct pointer types lacks a cast
+  while(ptrNext != fifo->head)
+                ^~
+..\FIFO.c:231:15: warning: comparison of distinct pointer types lacks a cast
+   if (ptrNext == fifo->base + (fifo->length - 1))
+               ^~
+..\FIFO.c:232:12: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+    ptrNext = fifo->base;
+            ^
+..\FIFO.c:235:9: error: incompatible types when assigning to type 'uint8_t {aka unsigned char}' from type 'struct sinfo'
+   *item = *ptrNext;
+         ^
+..\FIFO.c:236:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   item = ptrNext;
+        ^
+10:57:07 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+..\FIFO.c: In function 'FIFO_print':
+..\FIFO.c:76:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+..\FIFO.c: In function 'FIFO_Find_student_with_rollnumber':
+..\FIFO.c:108:17: error: request for member 'roll' in something not a structure or union
+   if(roll == ptr->roll)
+                 ^~
+..\FIFO.c: In function 'FIFO_Find_student_with_fname':
+..\FIFO.c:129:22: error: request for member 'fname' in something not a structure or union
+   if(strcmp(fname,ptr->fname) == 0)
+                      ^~
+..\FIFO.c:134:40: error: request for member 'fname' in something not a structure or union
+    printf("The First name is %s \n",ptr->fname);
+                                        ^~
+..\FIFO.c:135:39: error: request for member 'lname' in something not a structure or union
+    printf("The Last name is %s \n",ptr->lname);
+                                       ^~
+..\FIFO.c:136:38: error: request for member 'roll' in something not a structure or union
+    printf("The Roll Number is %d",ptr->roll);
+                                      ^~
+..\FIFO.c:137:36: error: request for member 'GPA' in something not a structure or union
+    printf("The GPA is %0.1f \n",ptr->GPA);
+                                    ^~
+..\FIFO.c:141:41: error: request for member 'cid' in something not a structure or union
+     printf("The Course ID is: %d \n",ptr->cid[i]);
+                                         ^~
+..\FIFO.c: In function 'FIFO_Find_students_with_CID':
+..\FIFO.c:162:23: error: request for member 'cid' in something not a structure or union
+    if((courseId == ptr->cid[course] ))
+                       ^~
+..\FIFO.c:167:42: error: request for member 'fname' in something not a structure or union
+     printf(" The First name is %s \n",ptr->fname);
+                                          ^~
+..\FIFO.c:168:41: error: request for member 'lname' in something not a structure or union
+     printf(" The Last name is %s \n",ptr->lname);
+                                         ^~
+..\FIFO.c:169:40: error: request for member 'roll' in something not a structure or union
+     printf(" The Roll Number is %d",ptr->roll);
+                                        ^~
+..\FIFO.c:170:38: error: request for member 'GPA' in something not a structure or union
+     printf(" The GPA is %0.1f \n",ptr->GPA);
+                                      ^~
+..\FIFO.c: In function 'FIFO_enqueue_specific_info':
+..\FIFO.c:199:14: error: request for member 'roll' in something not a structure or union
+    fifo->head->roll = roll;
+              ^~
+..\FIFO.c:203:20: error: request for member 'fname' in something not a structure or union
+   strcpy(fifo->head->fname,token);
+                    ^~
+..\FIFO.c:206:20: error: request for member 'lname' in something not a structure or union
+   strcpy(fifo->head->lname,token);
+                    ^~
+..\FIFO.c:209:13: error: request for member 'GPA' in something not a structure or union
+   fifo->head->GPA = atof(token);
+             ^~
+..\FIFO.c:214:14: error: request for member 'cid' in something not a structure or union
+    fifo->head->cid[course_index] = atoi(token);
+              ^~
+..\FIFO.c:218:65: error: request for member 'roll' in something not a structure or union
+   printf("[INFO] Roll Number %d saved successfully\n",fifo->head->roll);
+                                                                 ^~
+..\FIFO.c: In function 'FIFO_delete_student':
+..\FIFO.c:231:17: error: request for member 'roll' in something not a structure or union
+  int roll = item->roll;
+                 ^~
+..\FIFO.c:232:26: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* ptrNext = item;
+                          ^~~~
+..\FIFO.c:233:16: warning: comparison of distinct pointer types lacks a cast
+  while(ptrNext != fifo->head)
+                ^~
+..\FIFO.c:236:15: warning: comparison of distinct pointer types lacks a cast
+   if (ptrNext == fifo->base + (fifo->length - 1))
+               ^~
+..\FIFO.c:237:12: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+    ptrNext = fifo->base;
+            ^
+..\FIFO.c:240:9: error: incompatible types when assigning to type 'uint8_t {aka unsigned char}' from type 'struct sinfo'
+   *item = *ptrNext;
+         ^
+..\FIFO.c:241:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   item = ptrNext;
+        ^
+16:36:22 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+..\FIFO.c: In function 'FIFO_print':
+..\FIFO.c:76:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+..\FIFO.c: In function 'FIFO_Find_student_with_rollnumber':
+..\FIFO.c:108:17: error: request for member 'roll' in something not a structure or union
+   if(roll == ptr->roll)
+                 ^~
+..\FIFO.c: In function 'FIFO_Find_student_with_fname':
+..\FIFO.c:129:22: error: request for member 'fname' in something not a structure or union
+   if(strcmp(fname,ptr->fname) == 0)
+                      ^~
+..\FIFO.c:134:40: error: request for member 'fname' in something not a structure or union
+    printf("The First name is %s \n",ptr->fname);
+                                        ^~
+..\FIFO.c:135:39: error: request for member 'lname' in something not a structure or union
+    printf("The Last name is %s \n",ptr->lname);
+                                       ^~
+..\FIFO.c:136:38: error: request for member 'roll' in something not a structure or union
+    printf("The Roll Number is %d",ptr->roll);
+                                      ^~
+..\FIFO.c:137:36: error: request for member 'GPA' in something not a structure or union
+    printf("The GPA is %0.1f \n",ptr->GPA);
+                                    ^~
+..\FIFO.c:141:41: error: request for member 'cid' in something not a structure or union
+     printf("The Course ID is: %d \n",ptr->cid[i]);
+                                         ^~
+..\FIFO.c: In function 'FIFO_Find_students_with_CID':
+..\FIFO.c:162:23: error: request for member 'cid' in something not a structure or union
+    if((courseId == ptr->cid[course] ))
+                       ^~
+..\FIFO.c:167:42: error: request for member 'fname' in something not a structure or union
+     printf(" The First name is %s \n",ptr->fname);
+                                          ^~
+..\FIFO.c:168:41: error: request for member 'lname' in something not a structure or union
+     printf(" The Last name is %s \n",ptr->lname);
+                                         ^~
+..\FIFO.c:169:40: error: request for member 'roll' in something not a structure or union
+     printf(" The Roll Number is %d",ptr->roll);
+                                        ^~
+..\FIFO.c:170:38: error: request for member 'GPA' in something not a structure or union
+     printf(" The GPA is %0.1f \n",ptr->GPA);
+                                      ^~
+..\FIFO.c: In function 'FIFO_enqueue_specific_info':
+..\FIFO.c:199:14: error: request for member 'roll' in something not a structure or union
+    fifo->head->roll = roll;
+              ^~
+..\FIFO.c:203:20: error: request for member 'fname' in something not a structure or union
+   strcpy(fifo->head->fname,token);
+                    ^~
+..\FIFO.c:206:20: error: request for member 'lname' in something not a structure or union
+   strcpy(fifo->head->lname,token);
+                    ^~
+..\FIFO.c:209:13: error: request for member 'GPA' in something not a structure or union
+   fifo->head->GPA = atof(token);
+             ^~
+..\FIFO.c:214:14: error: request for member 'cid' in something not a structure or union
+    fifo->head->cid[course_index] = atoi(token);
+              ^~
+..\FIFO.c:218:65: error: request for member 'roll' in something not a structure or union
+   printf("[INFO] Roll Number %d saved successfully\n",fifo->head->roll);
+                                                                 ^~
+..\FIFO.c: In function 'FIFO_delete_student':
+..\FIFO.c:231:17: error: request for member 'roll' in something not a structure or union
+  int roll = item->roll;
+                 ^~
+..\FIFO.c:232:26: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  struct sinfo* ptrNext = item;
+                          ^~~~
+..\FIFO.c:233:16: warning: comparison of distinct pointer types lacks a cast
+  while(ptrNext != fifo->head)
+                ^~
+..\FIFO.c:236:15: warning: comparison of distinct pointer types lacks a cast
+   if (ptrNext == fifo->base + (fifo->length - 1))
+               ^~
+..\FIFO.c:237:12: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+    ptrNext = fifo->base;
+            ^
+..\FIFO.c:240:9: error: incompatible types when assigning to type 'uint8_t {aka unsigned char}' from type 'struct sinfo'
+   *item = *ptrNext;
+         ^
+..\FIFO.c:241:8: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   item = ptrNext;
+        ^
+17:13:41 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'add_students_from_file':
+..\StudentManagement.c:44:7: warning: implicit declaration of function 'FIFO_enqueue_specific_info' [-Wimplicit-function-declaration]
+    if(FIFO_enqueue_specific_info(&FIFO_Student, index_info, token)== -1)
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c: In function 'add_students_manually':
+..\StudentManagement.c:82:29: error: incompatible type for argument 2 of 'FIFO_enqueue'
+  FIFO_enqueue(&FIFO_Student,&temp_student);
+                             ^
+In file included from ..\StudentManagement.c:14:0:
+..\FIFO.h:95:17: note: expected 'struct sinfo' but argument is of type 'struct sinfo *'
+ FIFO_Buf_status FIFO_enqueue(FIFO_Buf_t* fifo, element_type item);
+                 ^~~~~~~~~~~~
+17:14:42 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'add_students_from_file':
+..\StudentManagement.c:44:7: warning: implicit declaration of function 'FIFO_enqueue_specific_info' [-Wimplicit-function-declaration]
+    if(FIFO_enqueue_specific_info(&FIFO_Student, index_info, token)== -1)
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "2- Student Management System.exe" FIFO.o StudentManagement.o main.o 
+Info: Nothing to build for 2- Student Management System
+18:08:33 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'add_students_from_file':
+..\StudentManagement.c:44:7: warning: implicit declaration of function 'FIFO_enqueue_specific_info' [-Wimplicit-function-declaration]
+    if(FIFO_enqueue_specific_info(&FIFO_Student, index_info, token)== -1)
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c: At top level:
+..\StudentManagement.c:87:6: error: redefinition of 'add_students_manually'
+ void add_students_manually()
+      ^~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c:56:6: note: previous definition of 'add_students_manually' was here
+ void add_students_manually()
+      ^~~~~~~~~~~~~~~~~~~~~
+..\StudentManagement.c: In function 'add_students_manually':
+..\StudentManagement.c:96:55: error: 'roll' undeclared (first use in this function)
+   if(FIFO_Find_student_with_rollnumber(&FIFO_Student, roll)==0)
+                                                       ^~~~
+..\StudentManagement.c:96:55: note: each undeclared identifier is reported only once for each function it appears in
+..\StudentManagement.c:99:15: error: expected expression before ')' token
+    scanf("%s",)
+               ^
+..\StudentManagement.c:90:17: warning: unused variable 'i' [-Wunused-variable]
+   unsigned char i;
+                 ^
+18:08:47 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'add_students_from_file':
+..\StudentManagement.c:44:7: warning: implicit declaration of function 'FIFO_enqueue_specific_info' [-Wimplicit-function-declaration]
+    if(FIFO_enqueue_specific_info(&FIFO_Student, index_info, token)== -1)
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "2- Student Management System.exe" FIFO.o StudentManagement.o main.o 
+03:21:54 **** Rebuild of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'add_students_from_file':
+..\StudentManagement.c:44:7: warning: implicit declaration of function 'FIFO_enqueue_specific_info' [-Wimplicit-function-declaration]
+    if(FIFO_enqueue_specific_info(&FIFO_Student, index_info, token)== -1)
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o "2- Student Management System.exe" FIFO.o StudentManagement.o main.o 
+Info: Nothing to build for 2- Student Management System
+Info: Nothing to build for 2- Student Management System
+03:29:10 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'add_students_from_file':
+..\StudentManagement.c:44:7: warning: implicit declaration of function 'FIFO_enqueue_specific_info' [-Wimplicit-function-declaration]
+    if(FIFO_enqueue_specific_info(&FIFO_Student, index_info, token)== -1)
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:29:19 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:30:02 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:30:09 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:30:40 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:30:46 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:31:01 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:31:04 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:31:30 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:31:41 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:32:22 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:33:21 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:33:31 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:33:36 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:33:59 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:34:05 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:35:20 **** Incremental Build of configuration Debug for project 2- Student Management System ****
+Info: Internal Builder is used for build
+gcc -o "2- Student Management System.exe" ".metadata\\.plugins\\org.eclipse.cdt.make.core\\specs.o" FIFO.o StudentManagement.o main.o 
+gcc: error: .metadata\.plugins\org.eclipse.cdt.make.core\specs.o: No such file or directory
+03:42:32 **** Rebuild of configuration Debug for project 2-Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o StudentManagement.o "..\\StudentManagement.c" 
+..\StudentManagement.c: In function 'add_students_from_file':
+..\StudentManagement.c:44:7: warning: implicit declaration of function 'FIFO_enqueue_specific_info' [-Wimplicit-function-declaration]
+    if(FIFO_enqueue_specific_info(&FIFO_Student, index_info, token)== -1)
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -o "2-Student Management System.exe" FIFO.o StudentManagement.o main.o 
+Info: Nothing to build for 2-Student Management System
+03:48:11 **** Incremental Build of configuration Debug for project 2-Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+..\FIFO.c: In function 'FIFO_print':
+..\FIFO.c:88:16: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'struct sinfo' [-Wformat=]
+    printf("\t %x \n", *temp);
+                ^
+..\FIFO.c:76:6: warning: unused variable 'i' [-Wunused-variable]
+  int i = 0;
+      ^
+gcc -o "2-Student Management System.exe" FIFO.o StudentManagement.o main.o 
+Info: Nothing to build for 2-Student Management System
+Info: Nothing to build for 2-Student Management System
+Info: Nothing to build for 2-Student Management System
+04:30:17 **** Incremental Build of configuration Debug for project 2-Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -o "2-Student Management System.exe" FIFO.o StudentManagement.o main.o 
+Info: Nothing to build for 2-Student Management System
+04:38:00 **** Incremental Build of configuration Debug for project 2-Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -o "2-Student Management System.exe" FIFO.o StudentManagement.o main.o 
+Info: Nothing to build for 2-Student Management System
+Info: Nothing to build for 2-Student Management System
+05:11:49 **** Incremental Build of configuration Debug for project 2-Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -o "2-Student Management System.exe" FIFO.o StudentManagement.o main.o 

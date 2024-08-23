@@ -1,0 +1,7 @@
+05:11:49 **** Incremental Build of configuration Debug for project 2-Student Management System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o FIFO.o "..\\FIFO.c" 
+gcc -o "2-Student Management System.exe" FIFO.o StudentManagement.o main.o 
+
+05:11:54 Build Finished. 0 errors, 0 warnings. (took 4s.963ms)
+

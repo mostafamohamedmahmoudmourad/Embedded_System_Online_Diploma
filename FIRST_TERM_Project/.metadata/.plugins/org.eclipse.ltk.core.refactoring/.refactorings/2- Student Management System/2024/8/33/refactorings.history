@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;‪2- Student Management System/FIFO.C‬&apos; to &apos;FIFO.c&apos;" description="Rename resource &apos;FIFO.C&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="FIFO.C" name="FIFO.c" stamp="1723675007634" updateReferences="true"/>
+</session>
