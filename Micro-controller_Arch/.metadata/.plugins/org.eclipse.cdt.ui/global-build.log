@@ -1,0 +1,256 @@
+17:52:12 **** Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'GPIOA_init':
+../Src/main.c:41:41: error: 'PORTA_BASE' undeclared (first use in this function); did you mean 'EXTI_BASE'?
+ #define GPIOA_CRH       *((vuint32_t *)(PORTA_BASE + 0x04))
+                                         ^
+../Src/main.c:72:2: note: in expansion of macro 'GPIOA_CRH'
+  GPIOA_CRH &= 0xFF0FFFFF;
+  ^~~~~~~~~
+../Src/main.c:41:41: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOA_CRH       *((vuint32_t *)(PORTA_BASE + 0x04))
+                                         ^
+../Src/main.c:72:2: note: in expansion of macro 'GPIOA_CRH'
+  GPIOA_CRH &= 0xFF0FFFFF;
+  ^~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:48:31: error: expected ')' before numeric constant
+ #define EXTI_BASE      0x4001 0400
+                               ^
+../Src/main.c:49:40: note: in expansion of macro 'EXTI_BASE'
+ #define EXTI_IMR       *((vuint32_t *)(EXTI_BASE + 0x00))
+                                        ^~~~~~~~~
+../Src/main.c:88:2: note: in expansion of macro 'EXTI_IMR'
+  EXTI_IMR |= (1<<0);
+  ^~~~~~~~
+../Src/main.c:48:31: error: expected ')' before numeric constant
+ #define EXTI_BASE      0x4001 0400
+                               ^
+../Src/main.c:50:41: note: in expansion of macro 'EXTI_BASE'
+ #define EXTI_RTSR       *((vuint32_t *)(EXTI_BASE + 0x08))
+                                         ^~~~~~~~~
+../Src/main.c:91:2: note: in expansion of macro 'EXTI_RTSR'
+  EXTI_RTSR |= (1<<0);
+  ^~~~~~~~~
+../Src/main.c:57:31: error: expected ')' before numeric constant
+ #define AFIO_BASE      0x4001 0000
+                               ^
+../Src/main.c:58:44: note: in expansion of macro 'AFIO_BASE'
+ #define AFIO_EXTICR1       *((vuint32_t *)(AFIO_BASE +  0x08))
+                                            ^~~~~~~~~
+../Src/main.c:97:2: note: in expansion of macro 'AFIO_EXTICR1'
+  AFIO_EXTICR1 = 0x0;
+  ^~~~~~~~~~~~
+../Src/main.c: In function 'EXTI0_IRQHandler':
+../Src/main.c:42:41: error: 'PORTA_BASE' undeclared (first use in this function); did you mean 'EXTI_BASE'?
+ #define GPIOA_ODR       *((vuint32_t *)(PORTA_BASE + 0x0C))
+                                         ^
+../Src/main.c:107:2: note: in expansion of macro 'GPIOA_ODR'
+  GPIOA_ODR ^= (1<<13);
+  ^~~~~~~~~
+../Src/main.c:48:31: error: expected ')' before numeric constant
+ #define EXTI_BASE      0x4001 0400
+                               ^
+../Src/main.c:51:39: note: in expansion of macro 'EXTI_BASE'
+ #define EXTI_PR       *((vuint32_t *)(EXTI_BASE + 0x14))
+                                       ^~~~~~~~~
+../Src/main.c:110:2: note: in expansion of macro 'EXTI_PR'
+  EXTI_PR |= (1<<0);
+  ^~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:52:43 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'GPIOA_init':
+../Src/main.c:41:41: error: 'PORTA_BASE' undeclared (first use in this function); did you mean 'EXTI_BASE'?
+ #define GPIOA_CRH       *((vuint32_t *)(PORTA_BASE + 0x04))
+                                         ^
+../Src/main.c:72:2: note: in expansion of macro 'GPIOA_CRH'
+  GPIOA_CRH &= 0xFF0FFFFF;
+  ^~~~~~~~~
+../Src/main.c:41:41: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOA_CRH       *((vuint32_t *)(PORTA_BASE + 0x04))
+                                         ^
+../Src/main.c:72:2: note: in expansion of macro 'GPIOA_CRH'
+  GPIOA_CRH &= 0xFF0FFFFF;
+  ^~~~~~~~~
+../Src/main.c: In function 'EXTI0_IRQHandler':
+../Src/main.c:42:41: error: 'PORTA_BASE' undeclared (first use in this function); did you mean 'EXTI_BASE'?
+ #define GPIOA_ODR       *((vuint32_t *)(PORTA_BASE + 0x0C))
+                                         ^
+../Src/main.c:107:2: note: in expansion of macro 'GPIOA_ODR'
+  GPIOA_ODR ^= (1<<13);
+  ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:53:20 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'GPIOA_init':
+../Src/main.c:44:41: error: 'PORTA_BASE' undeclared (first use in this function); did you mean 'EXTI_BASE'?
+ #define GPIOx_CRL       *((vuint32_t *)(PORTA_BASE + 0x00))
+                                         ^
+../Src/main.c:75:2: note: in expansion of macro 'GPIOx_CRL'
+  GPIOx_CRL |= (1<<2);
+  ^~~~~~~~~
+../Src/main.c:44:41: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOx_CRL       *((vuint32_t *)(PORTA_BASE + 0x00))
+                                         ^
+../Src/main.c:75:2: note: in expansion of macro 'GPIOx_CRL'
+  GPIOx_CRL |= (1<<2);
+  ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:53:37 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Lesson4_MCU_Interrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded System\Basic\Embedded_System_Online_Diploma\Unit6 - MCU_Fundamentals\Lesson4_MCU_Interrupt\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lesson4_MCU_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lesson4_MCU_Interrupt.elf
+ 
+arm-none-eabi-size   Lesson4_MCU_Interrupt.elf 
+arm-none-eabi-objdump -h -S  Lesson4_MCU_Interrupt.elf  > "Lesson4_MCU_Interrupt.list"
+arm-none-eabi-objcopy  -O binary  Lesson4_MCU_Interrupt.elf  "Lesson4_MCU_Interrupt.bin"
+   text	   data	    bss	    dec	    hex	filename
+    760	      8	   1568	   2336	    920	Lesson4_MCU_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lesson4_MCU_Interrupt.list
+Finished building: Lesson4_MCU_Interrupt.bin
+ 
+ 
+18:28:14 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:139:0: warning: "GPIOA_CRH" redefined
+ #define GPIOA_CRH       *((vuint32_t *)(PORTA_BASE + 0x04))
+ 
+../Src/main.c:41:0: note: this is the location of the previous definition
+ #define GPIOA_CRH       *((vuint32_t *)(GPIOA_BASE + 0x04))
+ 
+../Src/main.c:140:0: warning: "GPIOA_ODR" redefined
+ #define GPIOA_ODR       *((vuint32_t *)(PORTA_BASE + 0x0C))
+ 
+../Src/main.c:42:0: note: this is the location of the previous definition
+ #define GPIOA_ODR       *((vuint32_t *)(GPIOA_BASE + 0x0C))
+ 
+../Src/main.c:144:0: warning: "EXTI_IMR" redefined
+ #define EXTI_IMR       *((vuint32_t *)(PORTA_BASE + 0x00))
+ 
+../Src/main.c:49:0: note: this is the location of the previous definition
+ #define EXTI_IMR       *((vuint32_t *)(EXTI_BASE + 0x00))
+ 
+../Src/main.c:145:0: warning: "EXTI_RTSR" redefined
+ #define EXTI_RTSR       *((vuint32_t *)(PORTA_BASE + 0x08))
+ 
+../Src/main.c:50:0: note: this is the location of the previous definition
+ #define EXTI_RTSR       *((vuint32_t *)(EXTI_BASE + 0x08))
+ 
+../Src/main.c:146:0: warning: "EXTI_PR" redefined
+ #define EXTI_PR       *((vuint32_t *)(PORTA_BASE + 0x14))
+ 
+../Src/main.c:51:0: note: this is the location of the previous definition
+ #define EXTI_PR       *((vuint32_t *)(EXTI_BASE + 0x14))
+ 
+../Src/main.c:149:0: warning: "AFIO_BASE" redefined
+ #define  AFIO_BASE      0x40010400
+ 
+../Src/main.c:57:0: note: this is the location of the previous definition
+ #define AFIO_BASE      0x40010000
+ 
+../Src/main.c:150:0: warning: "AFIO_EXTICR1" redefined
+ #define AFIO_EXTICR1       *((vuint32_t *)(PORTA_BASE + 0x08))
+ 
+../Src/main.c:58:0: note: this is the location of the previous definition
+ #define AFIO_EXTICR1       *((vuint32_t *)(AFIO_BASE +  0x08))
+ 
+../Src/main.c:168:5: error: redefinition of 'main'
+ int main(void)
+     ^~~~
+../Src/main.c:81:5: note: previous definition of 'main' was here
+ int main(void)
+     ^~~~
+../Src/main.c:184:6: error: redefinition of 'EXTI0_IRQHandler'
+ void EXTI0_IRQHandler(void)
+      ^~~~~~~~~~~~~~~~
+../Src/main.c:104:6: note: previous definition of 'EXTI0_IRQHandler' was here
+ void EXTI0_IRQHandler(void)
+      ^~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:57:44 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Lesson4_MCU_Interrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded System\Basic\Embedded_System_Online_Diploma\Unit6 - MCU_Fundamentals\Lesson4_MCU_Interrupt\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lesson4_MCU_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lesson4_MCU_Interrupt.elf
+ 
+arm-none-eabi-objdump -h -S  Lesson4_MCU_Interrupt.elf  > "Lesson4_MCU_Interrupt.list"
+arm-none-eabi-objcopy  -O binary  Lesson4_MCU_Interrupt.elf  "Lesson4_MCU_Interrupt.bin"
+arm-none-eabi-size   Lesson4_MCU_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	      8	   1568	   2336	    920	Lesson4_MCU_Interrupt.elf
+Finished building: default.size.stdout
+Finished building: Lesson4_MCU_Interrupt.list
+Finished building: Lesson4_MCU_Interrupt.bin
+ 
+ 
+ 
+18:59:19 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Lesson4_MCU_Interrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded System\Basic\Embedded_System_Online_Diploma\Unit6 - MCU_Fundamentals\Lesson4_MCU_Interrupt\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lesson4_MCU_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lesson4_MCU_Interrupt.elf
+ 
+arm-none-eabi-objdump -h -S  Lesson4_MCU_Interrupt.elf  > "Lesson4_MCU_Interrupt.list"
+arm-none-eabi-objcopy  -O binary  Lesson4_MCU_Interrupt.elf  "Lesson4_MCU_Interrupt.bin"
+arm-none-eabi-size   Lesson4_MCU_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	      8	   1568	   2336	    920	Lesson4_MCU_Interrupt.elf
+Finished building: Lesson4_MCU_Interrupt.list
+Finished building: Lesson4_MCU_Interrupt.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+21:12:23 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Lesson4_MCU_Interrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded System\Basic\Embedded_System_Online_Diploma\Unit6 - MCU_Fundamentals\Lesson4_MCU_Interrupt\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lesson4_MCU_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lesson4_MCU_Interrupt.elf
+ 
+arm-none-eabi-objdump -h -S  Lesson4_MCU_Interrupt.elf  > "Lesson4_MCU_Interrupt.list"
+arm-none-eabi-objcopy  -O binary  Lesson4_MCU_Interrupt.elf  "Lesson4_MCU_Interrupt.bin"
+arm-none-eabi-size   Lesson4_MCU_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	      8	   1568	   2336	    920	Lesson4_MCU_Interrupt.elf
+Finished building: Lesson4_MCU_Interrupt.list
+Finished building: default.size.stdout
+Finished building: Lesson4_MCU_Interrupt.bin
+ 
+ 
+ 
+21:38:10 **** Incremental Build of configuration Debug for project Lesson4_MCU_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Lesson4_MCU_Interrupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded System\Basic\Embedded_System_Online_Diploma\Unit6 - MCU_Fundamentals\Lesson4_MCU_Interrupt\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lesson4_MCU_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lesson4_MCU_Interrupt.elf
+ 
+arm-none-eabi-objdump -h -S  Lesson4_MCU_Interrupt.elf  > "Lesson4_MCU_Interrupt.list"
+arm-none-eabi-objcopy  -O binary  Lesson4_MCU_Interrupt.elf  "Lesson4_MCU_Interrupt.bin"
+arm-none-eabi-size   Lesson4_MCU_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	      8	   1568	   2336	    920	Lesson4_MCU_Interrupt.elf
+Finished building: default.size.stdout
+Finished building: Lesson4_MCU_Interrupt.bin
+Finished building: Lesson4_MCU_Interrupt.list
+ 
+ 
+ 
