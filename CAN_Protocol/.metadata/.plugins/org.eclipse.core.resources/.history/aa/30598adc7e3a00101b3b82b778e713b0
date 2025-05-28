@@ -1,0 +1,13 @@
+/*
+ * core_cm3.h
+ *
+ *  Created on: 27 May 2025
+ *      Author: HP
+ */
+
+#ifndef CMSIS_DEVICE_ST_INCLUDE_CORE_CM3_H_
+#define CMSIS_DEVICE_ST_INCLUDE_CORE_CM3_H_
+
+
+
+#endif /* CMSIS_DEVICE_ST_INCLUDE_CORE_CM3_H_ */

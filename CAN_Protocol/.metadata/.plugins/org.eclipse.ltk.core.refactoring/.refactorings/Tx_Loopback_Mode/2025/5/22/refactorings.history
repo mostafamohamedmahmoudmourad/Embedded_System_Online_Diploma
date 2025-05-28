@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tx_Loopback_Mode/Inc/ main.h&apos; to &apos;main.h&apos;" description="Rename resource &apos;‪ main.h‬&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/ main.h" name="main.h" stamp="1748301663983" updateReferences="true"/>
+</session>

@@ -1,0 +1,13 @@
+/*
+ * stm32f1xx_hal_conf.h
+ *
+ *  Created on: 25 May 2025
+ *      Author: HP
+ */
+
+#ifndef TX_LOOPBACK_MODE_CODE_INC_STM32F1XX_HAL_CONF_H_
+#define TX_LOOPBACK_MODE_CODE_INC_STM32F1XX_HAL_CONF_H_
+
+
+
+#endif /* TX_LOOPBACK_MODE_CODE_INC_STM32F1XX_HAL_CONF_H_ */

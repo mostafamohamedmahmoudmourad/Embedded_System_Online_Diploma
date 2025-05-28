@@ -1,0 +1,13 @@
+/*
+ * I2C_Slave_EEPROM.h
+ *
+ *  Created on: 25 May 2025
+ *      Author: HP
+ */
+
+#ifndef HAL_EEPROM_I2C_SLAVE_EEPROM_H_
+#define HAL_EEPROM_I2C_SLAVE_EEPROM_H_
+
+
+
+#endif /* HAL_EEPROM_I2C_SLAVE_EEPROM_H_ */

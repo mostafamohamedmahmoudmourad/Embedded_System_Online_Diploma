@@ -1,0 +1,557 @@
+/**
+ ******************************************************************************
+ * @file           : main.c
+ * @author         : Mostafa Mourad
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under BSD 3-Clause license,
+ * the "License"; You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at:
+ *                        opensource.org/licenses/BSD-3-Clause
+ *
+ ******************************************************************************
+ */
+
+#if !defined(__SOFT_FP__) && defined(__ARM_FP)
+#warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+#endif
+
+#include "../stm32_F103C6_Drivers/MCAL/inc/stm32f103x6.h"
+#include "../stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_gpio_driver.h"
+#include "../stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_USART_driver.h"
+#include "../stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_EXTI_driver.h"
+#include "../stm32_F103C6_Drivers/HAL/includes/lcd.h"
+#include "../stm32_F103C6_Drivers/HAL/includes/keypad.h"
+#include "../stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_SPI_driver.h"
+#include "../stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_I2C_driver.h"
+#include "../stm32_F103C6_Drivers/HAL/includes/EEPROM.h"
+
+
+
+
+
+
+
+
+void clock_init(){
+	// IO port A clock enable
+	RCC_GPIOA_CLK_EN();
+	//IO port B clock enable
+	RCC_GPIOB_CLK_EN();
+
+}
+
+void GPIO_Init(){
+	GPIO_PinConfig_t PinCfg;
+	//PA1 input highZ Floating input (reset state)
+	PinCfg.GPIO_PinNumber = GPIO_PIN_1;
+	PinCfg.GPIO_MODE = GPIO_MODE_Input_FLO;
+	MCAL_GPIO_INIT(GPIOA, &PinCfg);
+
+	//PB1 output push pull mode
+	//CNF 00:General purpose output push-pull
+	//01 :Output mode max speed 10MHZ
+	PinCfg.GPIO_PinNumber = GPIO_PIN_1;
+	PinCfg.GPIO_MODE = GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+
+
+	//PA13 input highZ Floating input (rest state)
+	PinCfg.GPIO_PinNumber = GPIO_PIN_13;
+	PinCfg.GPIO_MODE = GPIO_MODE_Input_FLO;
+	MCAL_GPIO_INIT(GPIOA, &PinCfg);
+
+	//PB13 output push pull mode
+	PinCfg.GPIO_PinNumber = GPIO_PIN_13;
+	PinCfg.GPIO_MODE = GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+}
+
+void _mywait(int x){
+	unsigned int i,j;
+	for(i=0;i<x;i++)
+		for(j=0;j<255;j++);
+}
+
+int main(void){
+
+	clock_init();
+	GPIO_Init();
+
+
+	while(1){
+		//PA1>>connected external PUR
+		if(MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)==0){//press
+			MCAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
+			while(MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)==0){ //single press
+
+			}
+		}
+		//PA13>>connected external PDR
+		if(MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_13)==1){//Multi press
+			MCAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
+		}
+		_mywait(1);
+	}
+	return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+int main(void)
+{
+	//Enable CLock
+	RCC_GPIOA_CLK_EN();
+	RCC_GPIOB_CLK_EN();
+	RCC_AFIO_CLK_EN();
+
+	uint8_t ch1 [] = {0x1,0x2,0x3,0x4,0x5,0x6,0x7};
+	uint8_t ch2 [7] = {0};
+
+	HAL_EEPROM_Init();
+	HAL_EEPROM_Write_NBytes(0xAF, ch1, 7);
+	HAL_EEPROM_Read_NBytes(0xAF, ch2, 7);
+
+	//Test Case 2
+
+	ch1 [0] = 0xA;
+	ch1 [1] = 0xB;
+	ch1 [2] = 0xC;
+	ch1 [3] = 0xD;
+
+
+	HAL_EEPROM_Write_NBytes(0xFFF, ch1, 4);
+	HAL_EEPROM_Read_NBytes(0xFFF, ch2, 4);
+
+
+
+	while(1)
+	{
+
+	}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================SPI======================================================
+
+/*
+// =========== Main Program ==========
+// ========= Global Macros ==========
+#define MCU_Act_As_Master
+//#define MCU_Act_As_Slave
+
+// ========= Global variables ==========
+uint16_t data;
+
+
+
+unsigned int IRQ_Flag = 0 ;
+unsigned ch ;
+struct S_IRQ_SRC irq_src;
+
+void UART_IRQ_Callback (void)
+
+{
+#ifdef MCU_Act_As_Master
+	MCAL_UART_ReceiveData(USART1, &ch, disable);
+	MCAL_UART_SendData(USART1, &ch, enable);
+
+
+	// ========= Send Data To SPI1 ===========
+
+	// Slave Selection (Low), to listen
+	MCAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
+
+	// Send & Receive data
+	MCAL_SPI_TX_RX(SPI1, &data, PollingEnable);
+
+	// Slave Selection (High) idle mode
+	MCAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 1);
+
+#endif
+}
+static void SPI1_CallBack(struct S_IRQ_SRC  IRQ_src)
+{
+#ifdef MCU_Act_As_Slave
+	// If RX Buffer Not Empty Interrupt
+	if(IRQ_src.RXNE)
+	{
+		// Receive data
+		MCAL_SPI_ReceiveData(SPI1, &data,PollingEnable);
+
+		// Send the Received data to the terminal to see it
+		MCAL_UART_SendData(USART1, &data, enable);
+	}
+#endif
+}
+
+
+int main(void)
+{
+
+	//Enable CLock
+	RCC_GPIOA_CLK_EN();
+	RCC_GPIOB_CLK_EN();
+	RCC_AFIO_CLK_EN();
+
+	UART_Config uartCFG ;
+	uartCFG.BaudRate = UART_BaudRate_115200 ;
+	uartCFG.HwFlowCtl = UART_HwFlowCtl_NONE ;
+	uartCFG.IRQ_Enable = UART_IRQ_Enable_RXNEIE ;
+	uartCFG.P_IRQ_CallBack = UART_IRQ_Callback ;
+	uartCFG.Parity =UART_Parity_NONE ;
+	uartCFG.Payload_Length = UART_Payload_Length_8B;
+	uartCFG.StopBits = UART_StopBits__1 ;
+	uartCFG.USART_Mode = UART_Mode_TX_RX ;
+
+	MCAL_UART_Init(USART1, &uartCFG);
+	MCAL_UART_GPIO_Set_Pins(USART1);
+
+
+
+
+	// Configuration of SPI1
+	SPI_Config_t SPI1_Config;
+
+	// Common Configuration
+	SPI1_Config.SPI_BAUDRATEPRESCALER = SPI_BaudRatePrescaler_8 ;
+	SPI1_Config.CLKPhase =SPI_Clock_Phase_2EDGE_first_data_capture_edge ;
+	SPI1_Config.CLKPolarity = SPI_Clock_Polarity_HIGH_when_Idle ;
+	SPI1_Config.Frame_Format = SPI_Frame_Format_MSB_transmitted_first ;
+	SPI1_Config.DataSize = SPI_Frame_Format_8BIT;
+	SPI1_Config.Communication_Mode = SPI_DIRECTION_2LINES;
+
+#ifdef MCU_Act_As_Master
+	SPI1_Config.Device_Mode = SPI_Device_Mode_MASTER;
+	SPI1_Config.IRQ_Enable = SPI_IRQ_Enable_NONE;
+	SPI1_Config.NSS = SPI_NSS_SW_NSSInternalSoft_Set;	// To Control when open & when close, Set as Active High
+
+	// Configuration of SS
+	GPIO_PinConfig_t Pin_Cfg;
+
+	// Configure SS at PA4 by GPIO
+	Pin_Cfg.GPIO_PinNumber = GPIO_PIN_4;
+	Pin_Cfg.GPIO_MODE = GPIO_MODE_Output_PP;
+	Pin_Cfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+
+	MCAL_GPIO_INIT(GPIOA, &Pin_Cfg);
+
+	// Force the slave select (High) idle mode
+	MCAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 1);
+#endif
+
+#ifdef MCU_Act_As_Slave
+	SPI1_Config.Device_Mode = SPI_Device_Mode_SLAVE;
+	SPI1_Config.IRQ_Enable = SPI_IRQ_Enable_RXNEIE;
+	SPI1_Config.NSS = SPI_NSS_Hard_Slave;
+	SPI1_Config.P_IRQ_CallBack =  SPI1_CallBack;
+#endif
+	MCAL_SPI_Init(SPI1, &SPI1_Config);
+	MCAL_SPI_GPIO_Set_Pins(SPI1);
+
+	// Loop For Ever
+	while(1){}
+	return 0;
+
+	while(1)
+	{
+	}
+
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//=============================UART=====================================
+
+
+unsigned int IRQ_Flag = 0 ;
+unsigned ch ;
+
+
+void UART_IRQ_Callback (struct  UART_IRQ_Event* flag)
+
+{
+
+	MCAL_UART_ReceiveData(USART1, &ch, disable);
+	MCAL_UART_SendData(USART1, &ch, enable);
+
+}
+
+int main(void)
+{
+
+	//Enable CLock
+	RCC_GPIOA_CLK_EN();
+	RCC_GPIOB_CLK_EN();
+	RCC_AFIO_CLK_EN();
+
+	UART_Config uartCFG ;
+	uartCFG.BaudRate = UART_BaudRate_115200 ;
+	uartCFG.HwFlowCtl = UART_HwFlowCtl_NONE ;
+	uartCFG.IRQ_Enable = UART_IRQ_Enable_RXNEIE ;
+	uartCFG.P_IRQ_CallBack = UART_IRQ_Callback ;
+	uartCFG.Parity =UART_Parity_NONE ;
+	uartCFG.Payload_Length = UART_Payload_Length_8B;
+	uartCFG.StopBits = UART_StopBits__1 ;
+	uartCFG.USART_Mode = UART_Mode_TX_RX ;
+
+	MCAL_UART_Init(USART1, &uartCFG);
+	MCAL_UART_GPIO_Set_Pins(USART1);
+
+	while(1)
+	{
+	}
+
+}
+ */
+
+
+
+
+
+
+
+/*
+#define ZERO 	0x01
+#define ONE 	0x79
+#define TWO 	0x24
+#define THREE 	0x30
+#define FOUR 	0x4C
+#define FIVE 	0x12
+#define SIX 	0x02
+#define SEVEN 	0x19
+#define EIGHT 	0x00
+#define NINE 	0x10
+
+
+uint32_t IRQ_Flag=0;
+
+
+void clock_init()
+{
+
+	//Enable clock GPIOA
+	RCC_GPIOA_CLK_EN();
+	// Bit 3 : IO port B clock enable
+	RCC_GPIOB_CLK_EN();
+}
+
+void GPIOA_init()
+{
+	GPIO_PinConfig_t PinCfg;
+
+	//Input port A pin 1
+	//MODE 00: Input mode (reset state)
+	//CNF 01: Floating input (reset state)
+	PinCfg.GPIO_PinNumber = GPIO_PIN_9;
+	PinCfg.GPIO_MODE 	  		= GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed	= GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+
+	PinCfg.GPIO_PinNumber = GPIO_PIN_10;
+	PinCfg.GPIO_MODE 	  		= GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed	= GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+
+	PinCfg.GPIO_PinNumber = GPIO_PIN_11;
+	PinCfg.GPIO_MODE 	  		= GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed	= GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+
+	PinCfg.GPIO_PinNumber = GPIO_PIN_12;
+	PinCfg.GPIO_MODE 	  		= GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed	= GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+
+	PinCfg.GPIO_PinNumber = GPIO_PIN_13;
+	PinCfg.GPIO_MODE 	  		= GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed	= GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+
+	PinCfg.GPIO_PinNumber = GPIO_PIN_14;
+	PinCfg.GPIO_MODE 	  		= GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed	= GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+
+	PinCfg.GPIO_PinNumber = GPIO_PIN_15;
+	PinCfg.GPIO_MODE 	  		= GPIO_MODE_Output_PP;
+	PinCfg.GPIO_Output_Speed	= GPIO_SPEED_10M;
+	MCAL_GPIO_INIT(GPIOB, &PinCfg);
+}
+
+
+void EXTI9_Callback(void)
+{
+	IRQ_Flag = 1;
+	LCD_WRITE_STRING("IRQ EXTI9 is Happened _|- ");
+	delay_ms(1000);
+}
+
+
+int main()
+{
+	RCC_GPIOA_CLK_EN();
+	RCC_GPIOB_CLK_EN();
+	RCC_AFIO_CLK_EN();
+
+	LCD_INIT();
+	LCD_clear_screen();
+
+	EXTI_PinConfig_t 				EXTI_CFG;
+	EXTI_CFG.EXTI_PIN			= 	EXTI9PB9;
+	EXTI_CFG.Trigger 			= 	EXTI_Trigger_RISING;
+	EXTI_CFG.P_IRQ_CallBack		=	EXTI9_Callback;
+	EXTI_CFG.IRQ_EN 			= 	EXTI_IRQ_Enable;
+
+	MCAL_EXTI_GPIO_INIT(&EXTI_CFG);
+
+	IRQ_Flag = 1;
+
+	while(1)
+	{
+		if(IRQ_Flag)
+		{
+		LCD_clear_screen();
+		IRQ_Flag = 0;
+		}
+	}
+}
+ */
+//int main(void)
+//{
+//	clock_init();
+//	LCD_INIT();
+//
+//	unsigned char key_pressed;
+//
+//	LCD_WRITE_STRING("HEY");
+//	delay_ms(30);
+//	LCD_clear_screen();
+//	GPIOA_init();
+//	unsigned char LCD_DISPLAY [11] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+//	unsigned char DISPLAY [11] = {ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE};
+//	for (unsigned char i = 0; i < 10; i++) {
+//		LCD_WRITE_CHAR(LCD_DISPLAY[i]);
+//		MCAL_GPIO_WritePort(GPIOB, DISPLAY[i] << 9); /* write data on to the LED port */
+//		delay_ms(100);
+//		/* wait for 1 second */
+//	}
+//	//	MCAL_GPIO_WritePort(GPIOB, 0xDE);
+//	//	wait_ms(100);
+//	LCD_clear_screen();
+//	KEYPAD_INIT();
+//	LCD_WRITE_STRING("Keypad is ready");
+//	delay_ms(30);
+//	LCD_clear_screen();
+//
+//	while (1) {
+//
+//		key_pressed = KEYPAD_GETCHAR();
+//
+//		if (key_pressed != '\0') {   // Ignore if no key is pressed
+//			switch (key_pressed) {
+//			case 'A':
+//				break;
+//			case '?':
+//				LCD_clear_screen();
+//				break;
+//			default:
+//				LCD_WRITE_CHAR(key_pressed);
+//				break;
+//			}
+//		}
+//		//		//PA1 >>>Connected external PUR
+//		//
+//		//		if ( MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == 0) // press
+//		//		{
+//		//			MCAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
+//		//			while  (MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == 0)  ; //Single Pressing
+//		//		}
+//		//		//PA13 >>>Connected external PDR
+//		//		if ( MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_13) == 1) //Multi Pressing
+//		//		{
+//		//			MCAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
+//		//		}
+//		//		LCD_WRITE_STRING("HEY");
+//		//		wait_ms(30);
+//		//		LCD_clear_screen();
+//	}
+//}
+
+
+

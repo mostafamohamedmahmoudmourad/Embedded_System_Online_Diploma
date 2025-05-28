@@ -1,0 +1,13 @@
+/*
+ * Platform_Types.h
+ *
+ *  Created on: 25 May 2025
+ *      Author: Mostafa Mourad
+ */
+
+#ifndef MCAL_INC_PLATFORM_TYPES_H_
+#define MCAL_INC_PLATFORM_TYPES_H_
+
+
+
+#endif /* MCAL_INC_PLATFORM_TYPES_H_ */

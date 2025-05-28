@@ -1,0 +1,39 @@
+23:04:55 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:31:0:
+../Src/../stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_I2C_driver.h:107:32: warning: multi-line comment [-Wcomment]
+  uint32_t    I2C_ClockSpeed;   // Specifies the clock frequency.\
+                                ^
+In file included from ../Src/../stm32_F103C6_Drivers/HAL/includes/EEPROM.h:17:0,
+                 from ../Src/main.c:32:
+../Src/../stm32_F103C6_Drivers/HAL/includes/../../MCAL/inc/stm32_F103C6_I2C_driver.h:107:32: warning: multi-line comment [-Wcomment]
+  uint32_t    I2C_ClockSpeed;   // Specifies the clock frequency.\
+                                ^
+../Src/main.c:178:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+../Src/main.c: In function 'EXTI9_Callback':
+../Src/main.c:550:2: warning: implicit declaration of function 'delay_ms' [-Wimplicit-function-declaration]
+  delay_ms(1000);
+  ^~~~~~~~
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O ihex  Drivers.elf  "Drivers.hex"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3012	    140	     32	   3184	    c70	Drivers.elf
+Finished building: Drivers.hex
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+ 
+
+23:05:00 Build Finished. 0 errors, 4 warnings. (took 5s.147ms)
+

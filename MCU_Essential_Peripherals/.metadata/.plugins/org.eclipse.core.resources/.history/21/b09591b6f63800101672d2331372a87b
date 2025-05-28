@@ -1,0 +1,13 @@
+/*
+ * atmega32_LCD.h
+ *
+ *  Created on: 25 May 2025
+ *      Author: HP
+ */
+
+#ifndef HAL_ATMEGA32_LCD_H_
+#define HAL_ATMEGA32_LCD_H_
+
+
+
+#endif /* HAL_ATMEGA32_LCD_H_ */

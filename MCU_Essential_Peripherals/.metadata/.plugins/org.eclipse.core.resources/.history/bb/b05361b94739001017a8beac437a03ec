@@ -1,0 +1,13 @@
+/*
+ * atmega32_TIMER0_driver.h
+ *
+ *  Created on: 25 May 2025
+ *      Author: HP
+ */
+
+#ifndef MCAL_INCLUDES_ATMEGA32_TIMER0_DRIVER_H_
+#define MCAL_INCLUDES_ATMEGA32_TIMER0_DRIVER_H_
+
+
+
+#endif /* MCAL_INCLUDES_ATMEGA32_TIMER0_DRIVER_H_ */

@@ -1,0 +1,13 @@
+/*
+ * stm32f103x6.h
+ *
+ *  Created on: 24 May 2025
+ *      Author: HP
+ */
+
+#ifndef MCAL_INC_STM32F103X6_H_
+#define MCAL_INC_STM32F103X6_H_
+
+
+
+#endif /* MCAL_INC_STM32F103X6_H_ */

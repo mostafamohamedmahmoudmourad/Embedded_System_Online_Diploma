@@ -1,0 +1,544 @@
+01:07:51 **** Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+../Src/main.c:21:10: fatal error: main.h: No such file or directory
+ #include "main.h"
+          ^~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/stm32f1xx_hal_msp.c:23:10: fatal error: main.h: No such file or directory
+ #include "main.h"
+          ^~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+../Src/stm32f1xx_it.c:22:10: fatal error: main.h: No such file or directory
+ #include "main.h"
+          ^~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:10:18 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+../Src/main.c:21:10: fatal error: ../Inc/main.h: No such file or directory
+ #include "../Inc/main.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/stm32f1xx_hal_msp.c:23:10: fatal error: ../main.h: No such file or directory
+ #include "../main.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+../Src/stm32f1xx_it.c:22:10: fatal error: main.h: No such file or directory
+ #include "main.h"
+          ^~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:16:34 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+../Src/main.c:21:10: fatal error: ../main.h: No such file or directory
+ #include "../main.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/stm32f1xx_hal_msp.c:23:10: fatal error: ../main.h: No such file or directory
+ #include "../main.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+../Src/stm32f1xx_it.c:22:10: fatal error: ../main.h: No such file or directory
+ #include "../main.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:22:13 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Src/main.c:21:0:
+../Inc/main.h:32:10: fatal error: stm32f1xx_hal.h: No such file or directory
+ #include "stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/stm32f1xx_hal_msp.c:23:10: fatal error: ../main.h: No such file or directory
+ #include "../main.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+../Src/stm32f1xx_it.c:22:10: fatal error: ../main.h: No such file or directory
+ #include "../main.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:22:38 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Src/main.c:21:0:
+../Inc/main.h:32:10: fatal error: stm32f1xx_hal.h: No such file or directory
+ #include "stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Src/stm32f1xx_hal_msp.c:23:0:
+../Inc/main.h:32:10: fatal error: stm32f1xx_hal.h: No such file or directory
+ #include "stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Src/stm32f1xx_it.c:22:0:
+../Inc/main.h:32:10: fatal error: stm32f1xx_hal.h: No such file or directory
+ #include "stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:26:21 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Src/main.c:21:0:
+../Inc/main.h:32:10: fatal error: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h: No such file or directory
+ #include "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Src/stm32f1xx_hal_msp.c:23:0:
+../Inc/main.h:32:10: fatal error: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h: No such file or directory
+ #include "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Src/stm32f1xx_it.c:22:0:
+../Inc/main.h:32:10: fatal error: Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h: No such file or directory
+ #include "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h: No such file or directory
+ #include "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:27:43 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Src/main.c:21:0:
+../Inc/main.h:32:10: fatal error: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.hDrivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h: No such file or directory
+ #include "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.hDrivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Src/stm32f1xx_hal_msp.c:23:0:
+../Inc/main.h:32:10: fatal error: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.hDrivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h: No such file or directory
+ #include "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.hDrivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Src/stm32f1xx_it.c:22:0:
+../Inc/main.h:32:10: fatal error: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.hDrivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h: No such file or directory
+ #include "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.hDrivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h: No such file or directory
+ #include "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:27:50 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30:0,
+                 from ../Inc/main.h:32,
+                 from ../Src/main.c:21:
+../Inc/stm32f1xx_hal_conf.h:237:10: fatal error: stm32f1xx_hal_rcc.h: No such file or directory
+ #include "stm32f1xx_hal_rcc.h"
+          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30:0,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_hal_msp.c:23:
+../Inc/stm32f1xx_hal_conf.h:237:10: fatal error: stm32f1xx_hal_rcc.h: No such file or directory
+ #include "stm32f1xx_hal_rcc.h"
+          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30:0,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_it.c:22:
+../Inc/stm32f1xx_hal_conf.h:237:10: fatal error: stm32f1xx_hal_rcc.h: No such file or directory
+ #include "stm32f1xx_hal_rcc.h"
+          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h: No such file or directory
+ #include "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:28:31 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30:0,
+                 from ../Inc/main.h:32,
+                 from ../Src/main.c:21:
+../Inc/stm32f1xx_hal_conf.h:237:10: fatal error: stm32f1xx_hal_rcc.h: No such file or directory
+ #include "stm32f1xx_hal_rcc.h"
+          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30:0,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_hal_msp.c:23:
+../Inc/stm32f1xx_hal_conf.h:237:10: fatal error: stm32f1xx_hal_rcc.h: No such file or directory
+ #include "stm32f1xx_hal_rcc.h"
+          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30:0,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_it.c:22:
+../Inc/stm32f1xx_hal_conf.h:237:10: fatal error: stm32f1xx_hal_rcc.h: No such file or directory
+ #include "stm32f1xx_hal_rcc.h"
+          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+In file included from ../Src/system_stm32f1xx.c:59:0:
+../Src/../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:141:3: error: #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+  #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+   ^~~~~
+../Src/system_stm32f1xx.c:141:1: error: unknown type name 'uint32_t'
+ uint32_t SystemCoreClock = 16000000;
+ ^~~~~~~~
+../Src/system_stm32f1xx.c:142:7: error: unknown type name 'uint8_t'
+ const uint8_t AHBPrescTable[16U] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+       ^~~~~~~
+../Src/system_stm32f1xx.c:143:7: error: unknown type name 'uint8_t'
+ const uint8_t APBPrescTable[8U] =  {0, 0, 0, 0, 1, 2, 3, 4};
+       ^~~~~~~
+../Src/system_stm32f1xx.c: In function 'SystemCoreClockUpdate':
+../Src/system_stm32f1xx.c:226:3: error: unknown type name 'uint32_t'
+   uint32_t tmp = 0U, pllmull = 0U, pllsource = 0U;
+   ^~~~~~~~
+../Src/system_stm32f1xx.c:237:9: error: 'RCC' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+         ^~~
+../Src/system_stm32f1xx.c:237:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/system_stm32f1xx.c:237:21: error: 'RCC_CFGR_SWS' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+                     ^~~~~~~~~~~~
+../Src/system_stm32f1xx.c:250:29: error: 'RCC_CFGR_PLLMULL' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+       pllmull = RCC->CFGR & RCC_CFGR_PLLMULL;
+                             ^~~~~~~~~~~~~~~~
+                             RCC_CFGR_SWS
+../Src/system_stm32f1xx.c:251:31: error: 'RCC_CFGR_PLLSRC' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLMULL'?
+       pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
+                               ^~~~~~~~~~~~~~~
+                               RCC_CFGR_PLLMULL
+../Src/system_stm32f1xx.c:269:26: error: 'RCC_CFGR_PLLXTPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLSRC'?
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                          ^~~~~~~~~~~~~~~~~
+                          RCC_CFGR_PLLSRC
+../Src/system_stm32f1xx.c:269:49: error: 'uint32_t' undeclared (first use in this function)
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                                                 ^~~~~~~~
+../Src/system_stm32f1xx.c:269:58: error: expected ')' before 'RESET'
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                                                          ^~~~~
+../Src/system_stm32f1xx.c:327:37: error: 'RCC_CFGR_HPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4U)];
+                                     ^~~~~~~~~~~~~
+                                     RCC_CFGR_SWS
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:29:02 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/main.c:21:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_hal_msp.c:23:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_it.c:22:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+In file included from ../Src/system_stm32f1xx.c:59:0:
+../Src/../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:141:3: error: #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+  #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+   ^~~~~
+../Src/system_stm32f1xx.c:141:1: error: unknown type name 'uint32_t'
+ uint32_t SystemCoreClock = 16000000;
+ ^~~~~~~~
+../Src/system_stm32f1xx.c:142:7: error: unknown type name 'uint8_t'
+ const uint8_t AHBPrescTable[16U] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+       ^~~~~~~
+../Src/system_stm32f1xx.c:143:7: error: unknown type name 'uint8_t'
+ const uint8_t APBPrescTable[8U] =  {0, 0, 0, 0, 1, 2, 3, 4};
+       ^~~~~~~
+../Src/system_stm32f1xx.c: In function 'SystemCoreClockUpdate':
+../Src/system_stm32f1xx.c:226:3: error: unknown type name 'uint32_t'
+   uint32_t tmp = 0U, pllmull = 0U, pllsource = 0U;
+   ^~~~~~~~
+../Src/system_stm32f1xx.c:237:9: error: 'RCC' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+         ^~~
+../Src/system_stm32f1xx.c:237:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/system_stm32f1xx.c:237:21: error: 'RCC_CFGR_SWS' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+                     ^~~~~~~~~~~~
+../Src/system_stm32f1xx.c:250:29: error: 'RCC_CFGR_PLLMULL' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+       pllmull = RCC->CFGR & RCC_CFGR_PLLMULL;
+                             ^~~~~~~~~~~~~~~~
+                             RCC_CFGR_SWS
+../Src/system_stm32f1xx.c:251:31: error: 'RCC_CFGR_PLLSRC' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLMULL'?
+       pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
+                               ^~~~~~~~~~~~~~~
+                               RCC_CFGR_PLLMULL
+../Src/system_stm32f1xx.c:269:26: error: 'RCC_CFGR_PLLXTPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLSRC'?
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                          ^~~~~~~~~~~~~~~~~
+                          RCC_CFGR_PLLSRC
+../Src/system_stm32f1xx.c:269:49: error: 'uint32_t' undeclared (first use in this function)
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                                                 ^~~~~~~~
+../Src/system_stm32f1xx.c:269:58: error: expected ')' before 'RESET'
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                                                          ^~~~~
+../Src/system_stm32f1xx.c:327:37: error: 'RCC_CFGR_HPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4U)];
+                                     ^~~~~~~~~~~~~
+                                     RCC_CFGR_SWS
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:31:40 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/main.c:21:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_hal_msp.c:23:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_it.c:22:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+In file included from ../Src/system_stm32f1xx.c:59:0:
+../Src/../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:141:3: error: #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+  #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+   ^~~~~
+../Src/system_stm32f1xx.c: In function 'SystemCoreClockUpdate':
+../Src/system_stm32f1xx.c:239:9: error: 'RCC' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+         ^~~
+../Src/system_stm32f1xx.c:239:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/system_stm32f1xx.c:239:21: error: 'RCC_CFGR_SWS' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+                     ^~~~~~~~~~~~
+../Src/system_stm32f1xx.c:252:29: error: 'RCC_CFGR_PLLMULL' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+       pllmull = RCC->CFGR & RCC_CFGR_PLLMULL;
+                             ^~~~~~~~~~~~~~~~
+                             RCC_CFGR_SWS
+../Src/system_stm32f1xx.c:253:31: error: 'RCC_CFGR_PLLSRC' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLMULL'?
+       pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
+                               ^~~~~~~~~~~~~~~
+                               RCC_CFGR_PLLMULL
+../Src/system_stm32f1xx.c:271:26: error: 'RCC_CFGR_PLLXTPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLSRC'?
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                          ^~~~~~~~~~~~~~~~~
+                          RCC_CFGR_PLLSRC
+../Src/system_stm32f1xx.c:329:37: error: 'RCC_CFGR_HPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4U)];
+                                     ^~~~~~~~~~~~~
+                                     RCC_CFGR_SWS
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:34:01 **** Incremental Build of configuration Debug for project Tx_Loopback_Mode ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/main.c:21:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:33: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_hal_msp.c:23:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:35: Src/stm32f1xx_hal_msp.o] Error 1
+In file included from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29:0,
+                 from ../Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Inc/main.h:32,
+                 from ../Src/stm32f1xx_it.c:22:
+../Inc/../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30:10: fatal error: stm32f1xx.h: No such file or directory
+ #include "stm32f1xx.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:37: Src/stm32f1xx_it.o] Error 1
+In file included from ../Src/system_stm32f1xx.c:59:0:
+../Src/../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:141:3: error: #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+  #error "Please select first the target STM32F1xx device used in your application (in stm32f1xx.h file)"
+   ^~~~~
+../Src/system_stm32f1xx.c: In function 'SystemCoreClockUpdate':
+../Src/system_stm32f1xx.c:244:9: error: 'RCC' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+         ^~~
+../Src/system_stm32f1xx.c:244:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/system_stm32f1xx.c:244:21: error: 'RCC_CFGR_SWS' undeclared (first use in this function)
+   tmp = RCC->CFGR & RCC_CFGR_SWS;
+                     ^~~~~~~~~~~~
+../Src/system_stm32f1xx.c:257:29: error: 'RCC_CFGR_PLLMULL' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+       pllmull = RCC->CFGR & RCC_CFGR_PLLMULL;
+                             ^~~~~~~~~~~~~~~~
+                             RCC_CFGR_SWS
+../Src/system_stm32f1xx.c:258:31: error: 'RCC_CFGR_PLLSRC' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLMULL'?
+       pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
+                               ^~~~~~~~~~~~~~~
+                               RCC_CFGR_PLLMULL
+../Src/system_stm32f1xx.c:276:26: error: 'RCC_CFGR_PLLXTPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_PLLSRC'?
+         if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+                          ^~~~~~~~~~~~~~~~~
+                          RCC_CFGR_PLLSRC
+../Src/system_stm32f1xx.c:334:37: error: 'RCC_CFGR_HPRE' undeclared (first use in this function); did you mean 'RCC_CFGR_SWS'?
+   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4U)];
+                                     ^~~~~~~~~~~~~
+                                     RCC_CFGR_SWS
+make: *** [Src/subdir.mk:43: Src/system_stm32f1xx.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.

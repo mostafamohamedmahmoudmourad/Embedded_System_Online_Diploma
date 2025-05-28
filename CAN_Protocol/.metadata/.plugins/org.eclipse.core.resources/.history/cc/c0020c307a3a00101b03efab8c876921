@@ -1,0 +1,13 @@
+/*
+ * stm32f1xx_hal_conf.h
+ *
+ *  Created on: 26 May 2025
+ *      Author: HP
+ */
+
+#ifndef STM32F1XX_HAL_CONF_H_
+#define STM32F1XX_HAL_CONF_H_
+
+
+
+#endif /* STM32F1XX_HAL_CONF_H_ */

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CAN_Protocol&apos; to &apos;Tx_Loopback_Mode&apos;" description="Rename resource &apos;CAN_Protocol&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/CAN_Protocol" name="Tx_Loopback_Mode" stamp="1748295091125" updateReferences="true"/>
+</session>

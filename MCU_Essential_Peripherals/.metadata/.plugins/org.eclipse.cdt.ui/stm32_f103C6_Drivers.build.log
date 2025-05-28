@@ -1,0 +1,49 @@
+14:28:54 **** Incremental Build of configuration Debug for project stm32_f103C6_Drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Atmega32-Driver/MCAL/atmega32_GPIO_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Atmega32-Driver/MCAL/atmega32_GPIO_driver.d" -MT"Atmega32-Driver/MCAL/atmega32_GPIO_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Atmega32-Driver/MCAL/atmega32_GPIO_driver.o"
+arm-none-eabi-gcc "../Atmega32-Driver/MCAL/atmega32_TIMER0_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Atmega32-Driver/MCAL/atmega32_TIMER0_driver.d" -MT"Atmega32-Driver/MCAL/atmega32_TIMER0_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Atmega32-Driver/MCAL/atmega32_TIMER0_driver.o"
+arm-none-eabi-gcc "../Atmega32-Driver/MCAL/atmega32_USART_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Atmega32-Driver/MCAL/atmega32_USART_driver.d" -MT"Atmega32-Driver/MCAL/atmega32_USART_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Atmega32-Driver/MCAL/atmega32_USART_driver.o"
+../Src/main.c: In function 'UART_IRQ_CallBack':
+../Src/main.c:206:35: warning: passing argument 2 of 'MCAL_UART_ReceiveData' from incompatible pointer type [-Wincompatible-pointer-types]
+     MCAL_UART_ReceiveData(USART1, &ch, USART_disable);
+                                   ^
+In file included from ../Src/main.c:171:0:
+../Src/../stm32_f103C6_Drivers/MCAL/inc/stm32f103x6_USART_driver.h:133:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void MCAL_UART_ReceiveData(USART_TypeDef* USARTx, uint16_t* pRxBuffer, enum Polling_mechanism PollingEn);
+      ^~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:207:32: warning: passing argument 2 of 'MCAL_UART_SendData' from incompatible pointer type [-Wincompatible-pointer-types]
+     MCAL_UART_SendData(USART1, &ch, USART_disable);
+                                ^
+In file included from ../Src/main.c:171:0:
+../Src/../stm32_f103C6_Drivers/MCAL/inc/stm32f103x6_USART_driver.h:132:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void MCAL_UART_SendData(USART_TypeDef* USARTx, uint16_t* pTxBuffer, enum Polling_mechanism PollingEn);
+      ^~~~~~~~~~~~~~~~~~
+../Src/main.c:210:26: warning: passing argument 2 of 'MCAL_SPI_TX_RX' from incompatible pointer type [-Wincompatible-pointer-types]
+     MCAL_SPI_TX_RX(SPI1, &ch, SPI_enable);
+                          ^
+In file included from ../Src/main.c:172:0:
+../Src/../stm32_f103C6_Drivers/MCAL/inc/stm32f103x6_SPI_driver.h:147:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void MCAL_SPI_TX_RX(SPI_TypeDef *SPIx, uint16_t *pTxBuffer, enum Polling_Mechanism Polling_En);
+      ^~~~~~~~~~~~~~
+../Atmega32-Driver/MCAL/atmega32_GPIO_driver.c:15:10: fatal error: avr/interrupt.h: No such file or directory
+ #include "avr/interrupt.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Atmega32-Driver/MCAL/subdir.mk:27: Atmega32-Driver/MCAL/atmega32_GPIO_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Atmega32-Driver/MCAL/atmega32_TIMER0_driver.c:14:0:
+../Atmega32-Driver/MCAL/Includes/atmega32_TIMER0_driver.h:17:10: fatal error: avr/interrupt.h: No such file or directory
+ #include "avr/interrupt.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Atmega32-Driver/MCAL/subdir.mk:31: Atmega32-Driver/MCAL/atmega32_TIMER0_driver.o] Error 1
+../Atmega32-Driver/MCAL/atmega32_USART_driver.c:15:10: fatal error: avr/interrupt.h: No such file or directory
+ #include "avr/interrupt.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Atmega32-Driver/MCAL/subdir.mk:33: Atmega32-Driver/MCAL/atmega32_USART_driver.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+14:28:55 Build Failed. 7 errors, 3 warnings. (took 925ms)
+

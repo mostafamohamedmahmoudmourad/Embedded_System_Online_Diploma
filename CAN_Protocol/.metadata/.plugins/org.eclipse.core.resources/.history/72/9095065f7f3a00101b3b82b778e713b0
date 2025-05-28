@@ -1,0 +1,13 @@
+/*
+ * mpu_armv7.h
+ *
+ *  Created on: 27 May 2025
+ *      Author: HP
+ */
+
+#ifndef CMSIS_DEVICE_ST_INCLUDE_MPU_ARMV7_H_
+#define CMSIS_DEVICE_ST_INCLUDE_MPU_ARMV7_H_
+
+
+
+#endif /* CMSIS_DEVICE_ST_INCLUDE_MPU_ARMV7_H_ */

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Drivers/stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_I2C_driver&apos; to &apos;stm32_F103C6_I2C_driver.h&apos;" description="Rename resource &apos;stm32_F103C6_I2C_driver&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="stm32_F103C6_Drivers/MCAL/inc/stm32_F103C6_I2C_driver" name="stm32_F103C6_I2C_driver.h" stamp="1728942184193" updateReferences="true"/>
+</session>

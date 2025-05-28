@@ -1,0 +1,13 @@
+/*
+ * stm32f1xx_hal_tim.h
+ *
+ *  Created on: 27 May 2025
+ *      Author: HP
+ */
+
+#ifndef STM32F1XX_HAL_DRIVER_INC_STM32F1XX_HAL_TIM_H_
+#define STM32F1XX_HAL_DRIVER_INC_STM32F1XX_HAL_TIM_H_
+
+
+
+#endif /* STM32F1XX_HAL_DRIVER_INC_STM32F1XX_HAL_TIM_H_ */

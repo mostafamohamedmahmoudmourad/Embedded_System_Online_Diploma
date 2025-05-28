@@ -1,0 +1,13 @@
+/*
+ * stm32f1xx.h
+ *
+ *  Created on: 27 May 2025
+ *      Author: HP
+ */
+
+#ifndef CMSIS_DEVICE_ST_STM32F1XX_INCLUDE_STM32F1XX_H_
+#define CMSIS_DEVICE_ST_STM32F1XX_INCLUDE_STM32F1XX_H_
+
+
+
+#endif /* CMSIS_DEVICE_ST_STM32F1XX_INCLUDE_STM32F1XX_H_ */
